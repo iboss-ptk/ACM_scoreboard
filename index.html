@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="scoreboard" >
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
+  <script src="scoreboard.js"></script>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" ng-controller="scoreboardCtrl">
+
+    <table>
+      <tr ng-repeat="team in teams">
+        <td ng-bind="team.name"></td>
+        <td ng-bind="team.s1"></td>
+        <td ng-bind="team.s2"></td>
+      </tr>
+    </table>
+
+
+  </div>
+
+</body>
+</html>
