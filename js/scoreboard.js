@@ -124,27 +124,23 @@ function getAllTeam(Data) {
     var numberOfTeam = getNumOfTeam(Data);
     var teams = {};
 
-    
-
+    //PARSE THE RANK NUMBER TO INT ( OPTIMIZED )
     for(var i = 1; i <= numberOfTeam; i++){
         teams[i] = getTeamByRank(Data, i);
+        teams[i].rank = parseInt(teams[i].rank);
     }
-     for(var j = 1; j <= numberOfTeam; j++){
-        teams[j].rank = parseInt(teams[j].rank);
-    }
-    
-
+ 
     return teams;
 }
 
-
+//http://stackoverflow.com/questions/14478106/angularjs-sorting-by-property
 //TN : JSON Does Not SUPPORT OBJECTs but array! (kuy) 
 //and i guess that NG-REPEAT USE array so 
 //SO Let's Make Filter for our objects
 
 // <TAG> ng-repeat=" team in teams | orderObjectBy:'rank' " </TAG>
 // input is auto by 'teams' and return array (sorted)
-// attribute => field
+// attribute => any,field (ascend,decend by put '-')
 app.filter('orderObjectBy', function(){
  return function(input, attribute) {
     if (!angular.isObject(input)) return input;
