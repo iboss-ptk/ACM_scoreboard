@@ -4,16 +4,22 @@ var controllers = {};
 controllers.scoreboardCtrl = function ($scope) {
 
 	//score data must be replaced later
-	 $scope.teams = [{
-        name: 'THA',
-        s1: 1,
-        s2: 13
+    xmlDoc=loadXMLDoc("results-before.xml");
+    score_before = xmlToJson(xmlDoc);
+    $scope.header = getProblemItems(score_before);
+    $scope.teams = getAllTeam(score_before);
+    console.log($scope.header);
+    // console.log(getAllTeam(score_before));
+	// $scope.teams = [{
+ //        name: 'THA',
+ //        s1: 1,
+ //        s2: 13
 
-    }, {
-        name: 'JAP',
-        s1: 20,
-        s2: 9
-    }];
+ //    }, {
+ //        name: 'JAP',
+ //        s1: 20,
+ //        s2: 9
+ //    }];
 }
 
 
@@ -108,9 +114,15 @@ function getTeamByID(Data, id) {
     }
     
 }
-//Load RESULTS BEFORE freeze!!!
-xmlDoc=loadXMLDoc("results.xml");
-score_before = xmlToJson(xmlDoc);
-console.log(getTeamByID(score_before, 7));
+
+//Get ALL Teams
+function getAllTeam(Data) {
+    var numberOfTeam = getNumOfTeam(Data);
+    var teams = {};
+    for(var i = 1; i <= numberOfTeam; i++){
+        teams[i] = getTeamByRank(Data, i);
+    }
+    return teams;
+}
 
 
