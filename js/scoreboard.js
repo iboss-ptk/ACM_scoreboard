@@ -11,16 +11,16 @@ controllers.scoreboardCtrl = function ($scope) {
     $scope.teams = getAllTeam(score_before);
 
     // console.log(getAllTeam(score_before));
-	// $scope.teams = [{
- //        name: 'THA',
- //        s1: 1,
- //        s2: 13
+	/*$scope.teams = [{
+        teamName: 'THA',
+        rank: 1,
+        points: 99
 
- //    }, {
- //        name: 'JAP',
- //        s1: 20,
- //        s2: 9
- //    }];
+    }, {
+        teamName: 'JAP',
+        rank: 2,
+        points: 88
+    }];*/
 }
 
 
@@ -117,14 +117,50 @@ function getTeamByID(Data, id) {
     
 }
 
+
+
 //Get ALL Teams
 function getAllTeam(Data) {
     var numberOfTeam = getNumOfTeam(Data);
     var teams = {};
+
+    
+
     for(var i = 1; i <= numberOfTeam; i++){
         teams[i] = getTeamByRank(Data, i);
     }
+     for(var j = 1; j <= numberOfTeam; j++){
+        teams[j].rank = parseInt(teams[j].rank);
+    }
+    
+
     return teams;
 }
+
+
+//TN : JSON Does Not SUPPORT OBJECTs but array! (kuy) 
+//and i guess that NG-REPEAT USE array so 
+//SO Let's Make Filter for our objects
+
+// <TAG> ng-repeat=" team in teams | orderObjectBy:'rank' " </TAG>
+// input is auto by 'teams' and return array (sorted)
+// attribute => field
+app.filter('orderObjectBy', function(){
+ return function(input, attribute) {
+    if (!angular.isObject(input)) return input;
+
+    var array = [];
+    for(var objectKey in input) {
+        array.push(input[objectKey]);
+    }
+
+    array.sort(function(a, b){
+        a = parseInt(a[attribute]);
+        b = parseInt(b[attribute]);
+        return a - b;
+    });
+    return array;
+ }
+});
 
 

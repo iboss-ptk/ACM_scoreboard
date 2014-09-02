@@ -10,35 +10,37 @@
 <body>
 
   <div class="container" ng-controller="scoreboardCtrl">
-
-    <table>
+      <br>
+      <hr>
+    <table border='1'>
       <tr>
-        <th>Rank</th>
-        <th>Team Name</th>
-        <th colspan=2>Points</th>
+        <th>Rank      </th>
+        <th>TeamName      </th>
+        <th>solved      </th>
+        <th>Points      </th>
         <th ng-repeat="item in header">{{item.title}}</th>
       </tr>
-<<<<<<< HEAD
 
-      <tr ng-repeat="team in teams | orderBy:'rank*1'" >
-=======
-      <tr ng-repeat="(key, team) in teams" >
->>>>>>> daf0cfb1f1f9679c3bdc2dbafff571d2d1b6f990
+      <tr ng-repeat=" team in teams | orderObjectBy:'rank':true "  > 
         <td ng-bind="team.rank"></td>
         <td ng-bind="team.teamName"></td>
         <td ng-bind="team.solved"></td>
         <td ng-bind="team.points"></td>
+ 
         <td ng-repeat="item in team.problemSummaryInfo">
           <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
             <span ng-show="{{item.isSolved}}">
-              ({{item.solutionTime}} + {{(item.attempts-1) * 20}})</span>
+              ({{item.solutionTime}} + {{(item.attempts-1) * 20}})
             </span>
-          </td>
-      </tr>
+          </span>
+        </td>
+     </tr>
+
     </table>
-
-
   </div>
+
+   <br>
+      <hr>
 
 </body>
 </html>
