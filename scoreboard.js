@@ -8,7 +8,7 @@ controllers.scoreboardCtrl = function ($scope) {
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     $scope.teams = getAllTeam(score_before);
-    console.log($scope.header);
+
     // console.log(getAllTeam(score_before));
 	// $scope.teams = [{
  //        name: 'THA',

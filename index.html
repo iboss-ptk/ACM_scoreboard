@@ -15,13 +15,14 @@
       <tr>
         <th>Rank</th>
         <th>Team Name</th>
-        <th>Points</th>
+        <th colspan=2>Points</th>
         <th ng-repeat="item in header">{{item.title}}</th>
 
       </tr>
-      <tr ng-repeat="team in teams | orderBy:'rank*1'" >
+      <tr ng-repeat="(key, team) in teams" >
         <td ng-bind="team.rank"></td>
         <td ng-bind="team.teamName"></td>
+        <td ng-bind="team.solved"></td>
         <td ng-bind="team.points"></td>
         <td ng-repeat="item in team.problemSummaryInfo"><span  ng-show="{{item.attempts!=0}}">{{item.attempts}} <span ng-show="{{item.isSolved}}">({{item.solutionTime}} + {{(item.attempts-1) * 20}})</span></span></td>
       </tr>
