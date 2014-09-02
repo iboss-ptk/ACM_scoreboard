@@ -1,3 +1,4 @@
+//ANGULAR SCOREBOARD
 var app = angular.module('scoreboard', []);
 var controllers = {};
 
@@ -26,15 +27,12 @@ controllers.scoreboardCtrl = function ($scope) {
 app.controller(controllers);
 
 // Load XML function
-function loadXMLDoc(dname)
-{   if (window.XMLHttpRequest)
-      {
+function loadXMLDoc(dname){   
+    if (window.XMLHttpRequest){
       xhttp=new XMLHttpRequest();
-      }
-    else
-      {
+    }else{
       xhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
+    }
     xhttp.open("GET",dname,false);
     xhttp.send();
     return xhttp.responseXML;
@@ -43,7 +41,8 @@ function loadXMLDoc(dname)
 //Function for Converting XML to JSON
 xmlToJson = function(xml) {
     var obj = {};
-    if (xml.nodeType == 1) {                
+    
+    if (xml.nodeType == 1) { //TN : Element Node                
         if (xml.attributes.length > 0) {
             obj["@attributes"] = {};
             for (var j = 0; j < xml.attributes.length; j++) {
@@ -53,14 +52,16 @@ xmlToJson = function(xml) {
         }
     } else if (xml.nodeType == 3) { 
         obj = xml.nodeValue;
-    }            
+    }
+
+    //TN : recursive to get the child ( Ex. TeamStanding -> problemSummary )            
     if (xml.hasChildNodes()) {
         for (var i = 0; i < xml.childNodes.length; i++) {
             var item = xml.childNodes.item(i);
             var nodeName = item.nodeName;
             if (typeof (obj[nodeName]) == "undefined") {
                 obj[nodeName] = xmlToJson(item);
-            } else {
+            }else{
                 if (typeof (obj[nodeName].push) == "undefined") {
                     var old = obj[nodeName];
                     obj[nodeName] = [];
@@ -72,6 +73,7 @@ xmlToJson = function(xml) {
     }
     return obj;
 }
+
 //Get Problem Information
 function getProblemItems(Data) {
     var problem = {};

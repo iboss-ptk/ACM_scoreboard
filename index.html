@@ -1,11 +1,11 @@
 <!doctype html>
-<html ng-app="scoreboard" >
+<html ng-app="scoreboard">
 <head>  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
-  <script src="scoreboard.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/scoreboard.js"></script>
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,13 +17,18 @@
         <th>Team Name</th>
         <th>Points</th>
         <th ng-repeat="item in header">{{item.title}}</th>
-
       </tr>
+
       <tr ng-repeat="team in teams | orderBy:'rank*1'" >
         <td ng-bind="team.rank"></td>
         <td ng-bind="team.teamName"></td>
         <td ng-bind="team.points"></td>
-        <td ng-repeat="item in team.problemSummaryInfo"><span  ng-show="{{item.attempts!=0}}">{{item.attempts}} <span ng-show="{{item.isSolved}}">({{item.solutionTime}} + {{(item.attempts-1) * 20}})</span></span></td>
+        <td ng-repeat="item in team.problemSummaryInfo">
+          <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
+            <span ng-show="{{item.isSolved}}">
+              ({{item.solutionTime}} + {{(item.attempts-1) * 20}})</span>
+            </span>
+          </td>
       </tr>
     </table>
 
