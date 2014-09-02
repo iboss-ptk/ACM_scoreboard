@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <contestStandings>
   <standingsHeader currentDate="Sun Sep 08 14:13:28 ICT 2013" generatorId="$Id: DefaultScoringAlgorithm.java 2534 2012-04-18 02:27:12Z boudreat $" groupCount="1" medianProblemsSolved="2" problemCount="10" problemsAttempted="10" siteCount="1" systemName="CSUS Programming Contest System" systemURL="http://pc2.ecs.csus.edu/" systemVersion="9.2.3 20120910 build 2565" title="Programming Contest" totalAttempts="771" totalSolved="240">
     <groupList/>
