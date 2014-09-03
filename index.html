@@ -13,18 +13,18 @@
     <div class="container" ng-controller="scoreboardCtrl">
       <div class = "animated fadeInDown">
         <table class = "table">
-            <tr>
-              <th>Rank</th>
-              <th>Team Name</th>
-              <th colspan=2>Points</th>
-              <th ng-repeat="item in header">{{item.title}}</th>
+            <tr style="min-height:40px">
+              <th class="rankcell">Rank</th>
+              <th class="namecell">Team Name</th>
+              <th colspan=2 class="pointcell">Points</th>
+              <th ng-repeat="item in header" class="problemcell">{{item.title}}</th>
             </tr>
-            <tr ng-repeat=" team in teams | orderObjectBy:'rank':true " >
-                <td ng-bind="team.rank"></td>
-                <td ng-bind="team.teamName"></td>
-                <td ng-bind="team.solved"></td>
-                <td ng-bind="team.points"></td>
-                <td ng-repeat="item in team.problemSummaryInfo">
+            <tr ng-repeat=" team in teams | orderObjectBy:'rank':true " style="top:{{team.index*40 + 40}}px" class="notsort " id="{{team.teamId}}">
+                <td ng-bind="team.rank" class="rankcell"></td>
+                <td ng-bind="team.teamName" class="namecell"></td>
+                <td ng-bind="team.solved" class="solvedcell"></td>
+                <td ng-bind="team.points" class="subpointcell"></td>
+                <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index}}">
                   <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
                     <span ng-show="{{item.isSolved}}">
                       ({{item.solutionTime}} + {{(item.attempts-1) * 20}})

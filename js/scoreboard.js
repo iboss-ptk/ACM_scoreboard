@@ -21,6 +21,47 @@ controllers.scoreboardCtrl = function ($scope) {
         rank: 2,
         points: 88
     }];*/
+    xmlDoc=loadXMLDoc("results-after.xml");
+    score_after = xmlToJson(xmlDoc);
+
+    console.log(score_before);
+    numberOfProblem = getNumOfProblem(score_before);
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            lastChild = $('.notsort:last');
+            teamId = lastChild.attr('id');
+            teamDetails = getTeamByID(score_after, teamId);
+            // Add Each Problem Solving to Table
+            for(var i = 1; i <= numberOfProblem; i++){
+                if(teamDetails["problemSummaryInfo"][i]["attempts"] != 0) {
+                    if(teamDetails["problemSummaryInfo"][i]["isSolved"] != "false")
+                        lastChild.find(".problem" + i)
+                            .html(teamDetails["problemSummaryInfo"][i]["attempts"] +" (" + teamDetails["problemSummaryInfo"][i]["solutionTime"] + " + " + ((teamDetails["problemSummaryInfo"][i]["attempts"]-1)*20) + ")")
+                            .addClass('solved');
+                    else 
+                        lastChild.find(".problem" + i)
+                            .html(teamDetails["problemSummaryInfo"][i]["attempts"])
+                            .addClass('attempted');
+                }
+                
+            }
+            // Add new Points
+            lastChild.find(".subpointcell")
+                .html(teamDetails['points']);
+            // Add new Solved item
+            lastChild.find(".solvedcell")
+                .html(teamDetails['solved']);
+            // ====== Add new RANK ======
+            lastChild.find(".rankcell")
+                .html(teamDetails['rank']);
+
+            console.log(teamDetails);
+            lastChild
+                .removeClass('notsort')
+                .addClass('sorted');
+        }
+    });
 }
 
 
@@ -86,6 +127,12 @@ function getProblemItems(Data) {
     }
     return problem;
 }
+
+//Get Nomber of Problems
+function getNumOfProblem(Data){
+    return Data['contestStandings']['standingsHeader']['problem'].length;
+}
+
 //Get Number of Teams
 function getNumOfTeam(Data){
     return Data['contestStandings']['teamStanding'].length;

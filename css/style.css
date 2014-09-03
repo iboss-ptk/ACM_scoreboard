@@ -14,6 +14,39 @@ td{
 	border: 2px solid white;
 	border-radius: 1%;
 }
+tr{
+	position: absolute;
+	background-color: #ffd37a;
+	height: 40px;
+}
+.rankcell {
+	width: 60px;
+}
+.namecell {
+	width: 200px;
+	overflow: auto;
+}
+.pointcell {
+	width: 100px;
+}
+.subpointcell {
+	width: 80px;
+}
+.solvedcell {
+	width: 20px;
+}
+.problemcell {
+	width:100px;
+}
+.sorted {
+	background-color: gray;
+}
+.attempted{
+	background-color: red;
+}
+.solved {
+	background-color: green;
+}
 .container{
 	margin-top: 10px;
 }
