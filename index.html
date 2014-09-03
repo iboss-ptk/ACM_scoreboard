@@ -6,41 +6,34 @@
   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
-<body>
-
-  <div class="container" ng-controller="scoreboardCtrl">
-      <br>
-      <hr>
-    <table border='1'>
-      <tr>
-        <th>Rank      </th>
-        <th>TeamName      </th>
-        <th>solved      </th>
-        <th>Points      </th>
-        <th ng-repeat="item in header">{{item.title}}</th>
-      </tr>
-
-      <tr ng-repeat=" team in teams | orderObjectBy:'rank':true "  > 
-        <td ng-bind="team.rank"></td>
-        <td ng-bind="team.teamName"></td>
-        <td ng-bind="team.solved"></td>
-        <td ng-bind="team.points"></td>
- 
-        <td ng-repeat="item in team.problemSummaryInfo">
-          <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
-            <span ng-show="{{item.isSolved}}">
-              ({{item.solutionTime}} + {{(item.attempts-1) * 20}})
-            </span>
-          </span>
-        </td>
-     </tr>
-
-    </table>
-  </div>
-
-   <br>
-      <hr>
-
-</body>
-</html>
+<body background = "img/bg.png" style="background-attachment:fixed;background-position:center;">
+  <span class ="logo"><div class = "animated bounceInLeft"><img src = "img/ACMLOGO_CONTEST.png"/> </div><span>
+    <div class="container" ng-controller="scoreboardCtrl">
+      <div class = "animated fadeInDown">
+        <table class = "table">
+            <tr>
+              <th>Rank</th>
+              <th>Team Name</th>
+              <th colspan=2>Points</th>
+              <th ng-repeat="item in header">{{item.title}}</th>
+            </tr>
+            <tr ng-repeat=" team in teams | orderObjectBy:'rank':true " >
+                <td ng-bind="team.rank"></td>
+                <td ng-bind="team.teamName"></td>
+                <td ng-bind="team.solved"></td>
+                <td ng-bind="team.points"></td>
+                <td ng-repeat="item in team.problemSummaryInfo">
+                  <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
+                    <span ng-show="{{item.isSolved}}">
+                      ({{item.solutionTime}} + {{(item.attempts-1) * 20}})
+                    </span>
+                  </span>
+                </td>
+            </tr>
+        </table>
+        </div>
+      </div>
+    </body>
+    </html> 

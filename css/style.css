@@ -1,0 +1,19 @@
+table{
+	background-color: #ffd37a;
+	font-family: cursive;
+	font-size: 14px;
+	
+
+}
+th{
+	font-weight: bold;
+	border: 2px solid white;
+	border-radius: 1%;
+}
+td{
+	border: 2px solid white;
+	border-radius: 1%;
+}
+.container{
+	margin-top: 10px;
+}
