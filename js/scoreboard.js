@@ -2,6 +2,8 @@
 var app = angular.module('scoreboard', []);
 var controllers = {};
 
+
+
 controllers.scoreboardCtrl = function ($scope) {
 
 	//score data must be replaced later
@@ -32,34 +34,41 @@ controllers.scoreboardCtrl = function ($scope) {
             teamId = lastChild.attr('id');
             // console.log("NOW READING TEAM id = " + teamId);
             teamDetails = getTeamByID2(score_after, teamId);
+            //TEAMDETAIL 
+            //=>problemSummaryInfo
+            //=>@Attribute
+
             // Add Each Problem Solving to Table
-            for(var i = 0; i <numberOfProblem; i++){
-                if(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"] != 0) {
-                    
+            for(var i = 0; i <numberOfProblem; i++){ //i is problem no.
+
+                if(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"] != 0) {                    
                     if(teamDetails["problemSummaryInfo"][i]["@attributes"]["isSolved"] != "false"){
                         lastChild.find(".problem" + i)
                             .html(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"] +" (" + teamDetails["problemSummaryInfo"][i]["@attributes"]["solutionTime"] + " + " + ((teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"]-1)*20) + ")")
                             .addClass('solved');
+
+                        lastChild.find(".problem" + i)
+                            .addClass('animated fadeInDown');
                     }else{ 
                         lastChild.find(".problem" + i)
                             .html(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"])
                             .addClass('attempted');
+                         lastChild.find(".problem" + i)
+                            .addClass('animated fadeInDown');
+                           
                     }
-                    
-                }
-                
+                }  
             }
 
-            console.log("FIN FOR");
             // Add new Points
             lastChild.find(".subpointcell")
-                .html(teamDetails['points']);
+                .html(teamDetails["@attributes"]['points']);
             // Add new Solved item
             lastChild.find(".solvedcell")
-                .html(teamDetails['solved']);
+                .html(teamDetails["@attributes"]['solved']);
             // ====== Add new RANK ======
             lastChild.find(".rankcell")
-                .html(teamDetails['rank']);
+                .html(teamDetails["@attributes"]['rank']);
 
             console.log(teamDetails);
             lastChild
@@ -181,6 +190,12 @@ function getTeamByID2(Data,id){
         }  
     }
 
+}
+
+function sleep(seconds) 
+{
+  var e = new Date().getTime() + (seconds * 1000);
+  while (new Date().getTime() <= e) {}
 }
 
 

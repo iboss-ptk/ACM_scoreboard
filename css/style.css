@@ -41,9 +41,16 @@ tr{
 .sorted {
 	background-color: gray;
 }
+
+
+
 .attempted{
 	background-color: red;
+	
+
 }
+
+
 .solved {
 	background-color: green;
 }
