@@ -15,7 +15,7 @@ td{
 	border-radius: 1%;
 }
 tr{
-	position: absolute;
+	position: relative; /*CHANGE FROM ABS to Rela*/
 	background-color: #ffd37a;
 	height: 40px;
 }

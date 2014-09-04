@@ -9,7 +9,6 @@ controllers.scoreboardCtrl = function ($scope) {
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     $scope.teams = getAllTeam(score_before);
-
     // console.log(getAllTeam(score_before));
 	/*$scope.teams = [{
         teamName: 'THA',
@@ -29,23 +28,29 @@ controllers.scoreboardCtrl = function ($scope) {
 
     $(document).keypress(function(e) {
         if(e.which == 13) {
-            lastChild = $('.notsort:last');
+            lastChild = $('.notsort:last'); // Call last Element on Table
             teamId = lastChild.attr('id');
-            teamDetails = getTeamByID(score_after, teamId);
+            // console.log("NOW READING TEAM id = " + teamId);
+            teamDetails = getTeamByID2(score_after, teamId);
             // Add Each Problem Solving to Table
-            for(var i = 1; i <= numberOfProblem; i++){
-                if(teamDetails["problemSummaryInfo"][i]["attempts"] != 0) {
-                    if(teamDetails["problemSummaryInfo"][i]["isSolved"] != "false")
+            for(var i = 0; i <numberOfProblem; i++){
+                if(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"] != 0) {
+                    
+                    if(teamDetails["problemSummaryInfo"][i]["@attributes"]["isSolved"] != "false"){
                         lastChild.find(".problem" + i)
-                            .html(teamDetails["problemSummaryInfo"][i]["attempts"] +" (" + teamDetails["problemSummaryInfo"][i]["solutionTime"] + " + " + ((teamDetails["problemSummaryInfo"][i]["attempts"]-1)*20) + ")")
+                            .html(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"] +" (" + teamDetails["problemSummaryInfo"][i]["@attributes"]["solutionTime"] + " + " + ((teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"]-1)*20) + ")")
                             .addClass('solved');
-                    else 
+                    }else{ 
                         lastChild.find(".problem" + i)
-                            .html(teamDetails["problemSummaryInfo"][i]["attempts"])
+                            .html(teamDetails["problemSummaryInfo"][i]["@attributes"]["attempts"])
                             .addClass('attempted');
+                    }
+                    
                 }
                 
             }
+
+            console.log("FIN FOR");
             // Add new Points
             lastChild.find(".subpointcell")
                 .html(teamDetails['points']);
@@ -158,10 +163,24 @@ function getTeamByID(Data, id) {
     for(var i = 0; i < numberOfTeam; i++){
         if(Data['contestStandings']['teamStanding'][i]['@attributes']['teamId'] == id) {
             rank = Data['contestStandings']['teamStanding'][i]['@attributes']['rank'];
-            return getTeamByRank(Data, rank);
+            return getTeamByRank(Data, rank); //BUG
         }
     }
     
+}
+
+function getTeamByID2(Data,id){
+    var team = {};
+    var numberOfTeam = getNumOfTeam(Data);
+
+    for(var i = 0; i < numberOfTeam; i++){
+//            console.log("Currently Reading On team = " + Data['contestStandings']['teamStanding'][i]['@attributes']['teamName']); //////////////
+          if(Data['contestStandings']['teamStanding'][i]['@attributes']['teamId'] == id) {
+            team = Data['contestStandings']['teamStanding'][i];
+            return team;
+        }  
+    }
+
 }
 
 
