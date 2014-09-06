@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contestStandings>
+  <standingsHeader currentDate="Fri Aug 29 19:44:22 ICT 2014" generatorId="$Id: DefaultScoringAlgorithm.java 2534 2012-04-18 02:27:12Z boudreat $" groupCount="1" medianProblemsSolved="0" problemCount="8" problemsAttempted="8" siteCount="1" systemName="CSUS Programming Contest System" systemURL="http://pc2.ecs.csus.edu/" systemVersion="9.2.3 20120910 build 2565" title="Programming Contest" totalAttempts="135" totalSolved="47">
+    <groupList/>
+    <colorList>
+      <colors id="1" siteNum="1">
+        <problem id="1"/>
+        <problem id="2"/>
+        <problem id="3"/>
+        <problem id="4"/>
+        <problem id="5"/>
+        <problem id="6"/>
+        <problem id="7"/>
+        <problem id="8"/>
+      </colors>
+    </colorList>
+    <problem attempts="2" id="1" numberSolved="0" title="CrazyAdmin.big"/>
+    <problem attempts="5" id="2" numberSolved="0" title="CrazyAdmin.small"/>
+    <problem attempts="16" bestSolutionTime="29" id="3" lastSolutionTime="66" numberSolved="5" title="Fortress.big"/>
+    <problem attempts="27" bestSolutionTime="0" id="4" lastSolutionTime="66" numberSolved="5" title="Fortress.small"/>
+    <problem attempts="23" bestSolutionTime="2" id="5" lastSolutionTime="44" numberSolved="7" title="GoSchool.big"/>
+    <problem attempts="13" bestSolutionTime="2" id="6" lastSolutionTime="48" numberSolved="8" title="GoSchool.small"/>
+    <problem attempts="26" bestSolutionTime="2" id="7" lastSolutionTime="39" numberSolved="11" title="Prime.big"/>
+    <problem attempts="23" bestSolutionTime="2" id="8" lastSolutionTime="36" numberSolved="11" title="Prime.small"/>
+  </standingsHeader>
+  <teamStanding firstSolved="0" index="0" lastSolved="56" points="124" problemsAttempted="6" rank="1" solved="6" teamAlias="team14 (not aliasesd)" teamExternalId="" teamId="14" teamKey="1TEAM14" teamName="team14" teamSiteId="1" totalAttempts="9">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="4" index="3" isPending="false" isSolved="true" points="116" problemId="Fortress.big--8225718842106795289" solutionTime="56"/>
+    <problemSummaryInfo attempts="1" index="4" isPending="false" isSolved="true" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="5" isPending="false" isSolved="true" points="2" problemId="GoSchool.big-1209072890014382971" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="2" problemId="GoSchool.small-4192577788298233763" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="7" isPending="false" isSolved="true" points="2" problemId="Prime.big--2842085679751621910" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="2" problemId="Prime.small--2518734221475953980" solutionTime="2"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="1" lastSolved="65" points="212" problemsAttempted="7" rank="2" solved="6" teamAlias="team20 (not aliasesd)" teamExternalId="" teamId="20" teamKey="1TEAM20" teamName="team20" teamSiteId="1" totalAttempts="9">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="-1"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="65" problemId="Fortress.big--8225718842106795289" solutionTime="65"/>
+    <problemSummaryInfo attempts="1" index="4" isPending="false" isSolved="true" points="65" problemId="Fortress.small-1356621195648335470" solutionTime="65"/>
+    <problemSummaryInfo attempts="1" index="5" isPending="false" isSolved="true" points="26" problemId="GoSchool.big-1209072890014382971" solutionTime="26"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="26" problemId="GoSchool.small-4192577788298233763" solutionTime="26"/>
+    <problemSummaryInfo attempts="1" index="7" isPending="false" isSolved="true" points="25" problemId="Prime.big--2842085679751621910" solutionTime="25"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="5" problemId="Prime.small--2518734221475953980" solutionTime="5"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="2" lastSolved="63" points="309" problemsAttempted="6" rank="3" solved="6" teamAlias="team19 (not aliasesd)" teamExternalId="" teamId="19" teamKey="1TEAM19" teamName="team19" teamSiteId="1" totalAttempts="13">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="63" problemId="Fortress.big--8225718842106795289" solutionTime="63"/>
+    <problemSummaryInfo attempts="7" index="4" isPending="false" isSolved="true" points="182" problemId="Fortress.small-1356621195648335470" solutionTime="62"/>
+    <problemSummaryInfo attempts="1" index="5" isPending="false" isSolved="true" points="17" problemId="GoSchool.big-1209072890014382971" solutionTime="17"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="2" problemId="GoSchool.small-4192577788298233763" solutionTime="2"/>
+    <problemSummaryInfo attempts="2" index="7" isPending="false" isSolved="true" points="38" problemId="Prime.big--2842085679751621910" solutionTime="18"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="7" problemId="Prime.small--2518734221475953980" solutionTime="7"/>
+  </teamStanding>
+  <teamStanding firstSolved="36" index="3" lastSolved="66" points="651" problemsAttempted="6" rank="4" solved="6" teamAlias="team17 (not aliasesd)" teamExternalId="" teamId="17" teamKey="1TEAM17" teamName="team17" teamSiteId="1" totalAttempts="24">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="66" problemId="Fortress.big--8225718842106795289" solutionTime="66"/>
+    <problemSummaryInfo attempts="3" index="4" isPending="false" isSolved="true" points="106" problemId="Fortress.small-1356621195648335470" solutionTime="66"/>
+    <problemSummaryInfo attempts="4" index="5" isPending="false" isSolved="true" points="104" problemId="GoSchool.big-1209072890014382971" solutionTime="44"/>
+    <problemSummaryInfo attempts="2" index="6" isPending="false" isSolved="true" points="63" problemId="GoSchool.small-4192577788298233763" solutionTime="43"/>
+    <problemSummaryInfo attempts="4" index="7" isPending="false" isSolved="true" points="96" problemId="Prime.big--2842085679751621910" solutionTime="36"/>
+    <problemSummaryInfo attempts="10" index="8" isPending="false" isSolved="true" points="216" problemId="Prime.small--2518734221475953980" solutionTime="36"/>
+  </teamStanding>
+  <teamStanding firstSolved="29" index="4" lastSolved="48" points="261" problemsAttempted="6" rank="5" solved="5" teamAlias="team18 (not aliasesd)" teamExternalId="" teamId="18" teamKey="1TEAM18" teamName="team18" teamSiteId="1" totalAttempts="14">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="29" problemId="Fortress.big--8225718842106795289" solutionTime="29"/>
+    <problemSummaryInfo attempts="3" index="4" isPending="false" isSolved="true" points="69" problemId="Fortress.small-1356621195648335470" solutionTime="29"/>
+    <problemSummaryInfo attempts="5" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="-1"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="48" problemId="GoSchool.small-4192577788298233763" solutionTime="48"/>
+    <problemSummaryInfo attempts="3" index="7" isPending="false" isSolved="true" points="79" problemId="Prime.big--2842085679751621910" solutionTime="39"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="36" problemId="Prime.small--2518734221475953980" solutionTime="36"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="5" lastSolved="34" points="75" problemsAttempted="5" rank="6" solved="4" teamAlias="team21 (not aliasesd)" teamExternalId="" teamId="21" teamKey="1TEAM21" teamName="team21" teamSiteId="1" totalAttempts="7">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="3" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="-1"/>
+    <problemSummaryInfo attempts="1" index="5" isPending="false" isSolved="true" points="34" problemId="GoSchool.big-1209072890014382971" solutionTime="34"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="33" problemId="GoSchool.small-4192577788298233763" solutionTime="33"/>
+    <problemSummaryInfo attempts="1" index="7" isPending="false" isSolved="true" points="4" problemId="Prime.big--2842085679751621910" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="4" problemId="Prime.small--2518734221475953980" solutionTime="4"/>
+  </teamStanding>
+  <teamStanding firstSolved="23" index="6" lastSolved="24" points="47" problemsAttempted="2" rank="7" solved="2" teamAlias="team6 (not aliasesd)" teamExternalId="" teamId="6" teamKey="1TEAM6" teamName="team6" teamSiteId="1" totalAttempts="2">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="6" isPending="false" isSolved="false" points="0" problemId="GoSchool.small-4192577788298233763" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="7" isPending="false" isSolved="true" points="24" problemId="Prime.big--2842085679751621910" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="23" problemId="Prime.small--2518734221475953980" solutionTime="23"/>
+  </teamStanding>
+  <teamStanding firstSolved="16" index="7" lastSolved="19" points="55" problemsAttempted="2" rank="8" solved="2" teamAlias="team5 (not aliasesd)" teamExternalId="" teamId="5" teamKey="1TEAM5" teamName="team5" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="6" isPending="false" isSolved="false" points="0" problemId="GoSchool.small-4192577788298233763" solutionTime="0"/>
+    <problemSummaryInfo attempts="2" index="7" isPending="false" isSolved="true" points="39" problemId="Prime.big--2842085679751621910" solutionTime="19"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="16" problemId="Prime.small--2518734221475953980" solutionTime="16"/>
+  </teamStanding>
+  <teamStanding firstSolved="26" index="8" lastSolved="30" points="76" problemsAttempted="2" rank="9" solved="2" teamAlias="team2 (not aliasesd)" teamExternalId="" teamId="2" teamKey="1TEAM2" teamName="team2" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="2" index="5" isPending="false" isSolved="true" points="50" problemId="GoSchool.big-1209072890014382971" solutionTime="30"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="26" problemId="GoSchool.small-4192577788298233763" solutionTime="26"/>
+    <problemSummaryInfo attempts="0" index="7" isPending="false" isSolved="false" points="0" problemId="Prime.big--2842085679751621910" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="8" isPending="false" isSolved="false" points="0" problemId="Prime.small--2518734221475953980" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="14" index="9" lastSolved="19" points="113" problemsAttempted="2" rank="10" solved="2" teamAlias="team4 (not aliasesd)" teamExternalId="" teamId="4" teamKey="1TEAM4" teamName="team4" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="6" isPending="false" isSolved="false" points="0" problemId="GoSchool.small-4192577788298233763" solutionTime="0"/>
+    <problemSummaryInfo attempts="5" index="7" isPending="false" isSolved="true" points="99" problemId="Prime.big--2842085679751621910" solutionTime="19"/>
+    <problemSummaryInfo attempts="1" index="8" isPending="false" isSolved="true" points="14" problemId="Prime.small--2518734221475953980" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="36" index="10" lastSolved="36" points="132" problemsAttempted="3" rank="11" solved="2" teamAlias="team11 (not aliasesd)" teamExternalId="" teamId="11" teamKey="1TEAM11" teamName="team11" teamSiteId="1" totalAttempts="9">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="0"/>
+    <problemSummaryInfo attempts="4" index="6" isPending="false" isSolved="false" points="0" problemId="GoSchool.small-4192577788298233763" solutionTime="-1"/>
+    <problemSummaryInfo attempts="2" index="7" isPending="false" isSolved="true" points="56" problemId="Prime.big--2842085679751621910" solutionTime="36"/>
+    <problemSummaryInfo attempts="3" index="8" isPending="false" isSolved="true" points="76" problemId="Prime.small--2518734221475953980" solutionTime="36"/>
+  </teamStanding>
+  <teamStanding firstSolved="30" index="11" lastSolved="36" points="146" problemsAttempted="4" rank="12" solved="2" teamAlias="team10 (not aliasesd)" teamExternalId="" teamId="10" teamKey="1TEAM10" teamName="team10" teamSiteId="1" totalAttempts="10">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="-1"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="-1"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="5" isPending="false" isSolved="false" points="0" problemId="GoSchool.big-1209072890014382971" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="6" isPending="false" isSolved="false" points="0" problemId="GoSchool.small-4192577788298233763" solutionTime="0"/>
+    <problemSummaryInfo attempts="4" index="7" isPending="false" isSolved="true" points="90" problemId="Prime.big--2842085679751621910" solutionTime="30"/>
+    <problemSummaryInfo attempts="2" index="8" isPending="false" isSolved="true" points="56" problemId="Prime.small--2518734221475953980" solutionTime="36"/>
+  </teamStanding>
+  <teamStanding firstSolved="8" index="12" lastSolved="29" points="177" problemsAttempted="4" rank="13" solved="2" teamAlias="team3 (not aliasesd)" teamExternalId="" teamId="3" teamKey="1TEAM3" teamName="team3" teamSiteId="1" totalAttempts="22">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.big--5657514426836216073" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="CrazyAdmin.small--5374226511598969168" solutionTime="0"/>
+    <problemSummaryInfo attempts="6" index="3" isPending="false" isSolved="false" points="0" problemId="Fortress.big--8225718842106795289" solutionTime="-1"/>
+    <problemSummaryInfo attempts="7" index="4" isPending="false" isSolved="false" points="0" problemId="Fortress.small-1356621195648335470" solutionTime="-1"/>
+    <problemSummaryInfo attempts="8" index="5" isPending="false" isSolved="true" points="169" problemId="GoSchool.big-1209072890014382971" solutionTime="29"/>
+    <problemSummaryInfo attempts="1" index="6" isPending="false" isSolved="true" points="8" problemId="GoSchool.small-4192577788298233763" solutionTime="8"/>
+    <problemSummaryInfo attempts="0" index="7" isPending="false" isSolved="false" points="0" problemId="Prime.big--2842085679751621910" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="8" isPending="false" isSolved="false" points="0" problemId="Prime.small--2518734221475953980" solutionTime="0"/>
+  </teamStanding>
+ 
+</contestStandings>

@@ -15,9 +15,10 @@ td{
 	border-radius: 1%;
 }
 tr{
-	position: relative; /*CHANGE FROM ABS to Rela*/
+	position: absolute; /*Sorry Change back to Absolute*/
 	background-color: #ffd37a;
 	height: 40px;
+	transition: all 0.5s ease;
 }
 .rankcell {
 	width: 60px;
@@ -46,13 +47,12 @@ tr{
 
 .attempted{
 	background-color: red;
-	
-
 }
-
-
 .solved {
 	background-color: green;
+}
+.toopen {
+	background-color: yellow;
 }
 .container{
 	margin-top: 10px;
