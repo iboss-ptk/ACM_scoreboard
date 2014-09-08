@@ -20,7 +20,7 @@ app.directive('shortcut', function() {
 controllers.scoreboardCtrl = function ($scope) {
 
 	//score data must be replaced later
-    xmlDoc=loadXMLDoc("results-before.xml");
+    xmlDoc=loadXMLDoc("results.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     // Reconstruct Teams data
@@ -31,7 +31,7 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
-    xmlDoc=loadXMLDoc("results-after.xml");
+    xmlDoc=loadXMLDoc("results-new.xml");
     score_after = xmlToJson(xmlDoc);
     allteam_after_temp = getAllTeam(score_after);
     allteam_after = [];
