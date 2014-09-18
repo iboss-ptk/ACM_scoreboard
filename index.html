@@ -14,25 +14,25 @@
       <div class = "animated fadeInDown">
         <table class = "table">
           <thead>
-            <tr style="min-height:40px">
-              <td class="rankcell">Rank</td>
+            <tr>
+              <td class="rankcell" >Rank</td>
               <td class="namecell">Team Name</td>
               <td colspan=2 class="pointcell">Points</td>
               <td ng-repeat="item in header" class="problemcell">{{item.title}}</td>
             </tr>
           </thead>
-            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*40}}px" class="{{team.stylingClass}}" id="{{team.teamId}}">
-                <td>{{team.totalAttempts}}</td>
-                <td ng-bind="team.rank" class="rankcell" style ="width : 200px;"></td>
-                <td ng-bind="team.teamName" class="namecell" style ="width : 200px;"></td>
-                <td ng-bind="team.solved" class="solvedcell"style ="width : 200px;"></td>
-                <td ng-bind="team.points" class="subpointcell"style ="width : 200px;"></td>
-                <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index-1}} {{item.problemStylingClass}}" style ="width : 200px;"> 
+            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*30}}px; z-index :{{team.rank}}" class="{{team.stylingClass}}" id="{{team.teamId}}">
+                <!--<td>{{team.totalAttempts}}</td>-->
+                <td ng-bind="team.rank" class="rankcell"></td>
+                <td ng-bind="team.teamName" class="namecell" ></td>
+                <td ng-bind="team.solved" class="solvedcell"></td>
+                <td ng-bind="team.points" class="subpointcell"></td>
+                <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index-1}} {{item.problemStylingClass}}" > 
                   <!-- CLASS = problemcell insert index-1 leaw dai  XML SAYS <problemSummaryInfo index="1 to 8" -->
                   <!-- Loop can Run 0 to 7 SO ITEM.INDEX-1 -->
                   <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
                     <span ng-show="{{item.isSolved}}">
-                      ({{item.solutionTime}} + {{(item.attempts-1) * 20}})
+                      ({{item.solutionTime}}+{{(item.attempts-1) * 20}})
                     </span>
                   </span>
                 </td>

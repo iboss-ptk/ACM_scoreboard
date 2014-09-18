@@ -1,43 +1,67 @@
 table{
-	background-color: #ffd37a;
+
 	font-family: cursive;
-	font-size: 14px;
+	font-size: 11px;
+	font-weight: bold;
 	
 
 }
-th{
-	font-weight: bold;
-	border: 2px solid white;
-	border-radius: 1%;
+thead{
+	font-size: 13px;
+	min-height: 30px;
+	max-height: 30px;
+
+
 }
 td{
-	border: 2px solid white;
-	border-radius: 1%;
+	min-height: 30px;
+	max-height: 30px;
+	background-color: #eaeae8;
 }
 tr{
 	position: absolute; /*Sorry Change back to Absolute*/
-	background-color: #ffd37a;
-	height: 40px;
-	transition: all 0.5s ease;
+	
+	min-height: 30px;
+	max-height: 30px;
+	transition: all 1.5s ease;
 }
 .rankcell {
-	width: 60px;
+	min-width: 50px;
+	max-width: 50px;
+	min-height: 30px;
+	max-height: 30px;
 }
 .namecell {
-	width: 200px;
-	overflow: auto;
+	min-height: 30px;
+	max-height: 30px;
+	min-width: 150px;
+	max-width: 150px;
 }
 .pointcell {
-	width: 100px;
+	min-height: 30px;
+	max-height: 30px;
+	min-width: 100px;
+	max-width: 100px;
 }
 .subpointcell {
-	width: 80px;
+	min-height: 30px;
+	max-height: 30px;
+	min-width: 70px;
+	min-width: 70px;
 }
 .solvedcell {
-	width: 20px;
+	min-height: 30px;
+	max-height: 30px;
+	min-width: 30px;
+	min-width: 30px;
 }
 .problemcell {
-	width:100px;
+	min-height: 30px;
+	max-height: 30px;
+	max-width:80px;
+	min-width: 80px;
+	font-size: 11;
+
 }
 .sorted {
 	background-color: gray;
@@ -46,14 +70,17 @@ tr{
 
 
 .attempted{
-	background-color: red;
+	background-color: #f26a6a;
+	color :black;
 }
 .solved {
-	background-color: green;
+	background-color: #C6FFA1;
+	color :green;
+
 }
 .toopen {
-	background-color: yellow;
+	background-color: #f0f06c;
+	color:#f96f00;
 }
 .container{
-	margin-top: 10px;
 }
