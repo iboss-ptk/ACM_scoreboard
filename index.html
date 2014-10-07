@@ -12,6 +12,10 @@
   <span class ="logo"><div class = "animated bounceInLeft"><img src = "img/ACMLOGO_CONTEST.png"/> </div><span>
     <div class="container" ng-controller="scoreboardCtrl">
       <div class = "animated fadeInDown">
+        <div style="position:absolute; top: -30px;">
+          <button class="btn btn-primary" ng-click="resumeStages()">Resume Stage</button>
+          <button class="btn btn-danger" ng-click="clearStage()">Clear Stage</button>          
+        </div>
         <table class = "table">
           <thead>
             <tr>

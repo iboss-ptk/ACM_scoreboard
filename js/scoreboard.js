@@ -18,11 +18,12 @@ app.directive('shortcut', function() {
 
 
 controllers.scoreboardCtrl = function ($scope) {
-    // Set Team height here
+    // ================== Set Team height here ======================
     var teamHeight = 30;
     $scope.teamHeight = teamHeight;
+    //===============================================================
 
-	//score data must be replaced later
+    //score data must be replaced later
     xmlDoc=loadXMLDoc("results.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
@@ -45,7 +46,6 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam_after.push(val);
     });
 
-
     //Add Parameter to Pending Item
     allteam = addToOpen(allteam, allteam_after);
     // console.log(allteam);
@@ -54,6 +54,78 @@ controllers.scoreboardCtrl = function ($scope) {
 
     // Get number of the problem
     numberOfProblem = getNumOfProblem(score_before);
+
+    
+    //Resuem stages function
+    $scope.resumeStages = function(){
+        var stages = localStorage.stages;
+        if(stages !== undefined){
+            stages = JSON.parse(stages);
+            $.each(stages, function(team, problems) {
+                /* iterate through array or object */
+                $.each(problems, function(problem, val) {
+
+                    if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true || val !== 1) return;
+                    // Find Team index in After Score
+                    afterTeamIndex = getTeamIndexByID(allteam_after, allteam[team]["teamId"]);
+                    var problemItem = allteam_after[afterTeamIndex]["problemSummaryInfo"][problem];
+                    var isSolved = problemItem["isSolved"];
+                    var attempts = parseInt(problemItem["attempts"]);
+                    var solutionTime = parseInt(problemItem["solutionTime"]);
+
+                    //Check is Solved or not
+                    if(isSolved == "true") {
+                        allteam[team]["solved"] = parseInt(allteam[team]["solved"]) + 1 + ""; //Add number of solved items
+                        allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
+                        allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated flip solved"; // Add Styling Class
+                        allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                        
+                    } else {
+                        allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated flip attempted";   // Add Styling Class    
+                        allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                                 
+                    }
+
+
+                   // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
+                });
+
+            });
+        }
+
+        allteam = rerank(allteam);
+    }
+
+    $scope.clearStage = function(){
+        alert("Stage was clear !!!");
+        localStorage.clear();
+    }
+
+    //$scope.resumeStages();
+    function saveStage(team, problem){
+        var stages = localStorage.stages;
+        if(stages !== undefined){
+            stages = JSON.parse(stages);
+            if(stages[team] == undefined)
+                stages[team] = {};
+            stages[team][problem] = 1;
+        }
+        else {
+            stages = {};
+            stages[team] = {};
+            stages[team][problem] = 1;
+        }
+        stages = JSON.stringify(stages);
+        localStorage.stages = stages;
+
+    }
+
+   // $scope.resumeStages();
 
     //Attach open function to Scope
     $scope.opentag = function(position){            
@@ -98,8 +170,9 @@ controllers.scoreboardCtrl = function ($scope) {
             //Set Z index of current team and add shadow
             allteam[position[0]]["z"] = 100;
             allteam[position[0]]["stylingClass"] = "shadow";
-            // console.log(position);
-            // console.log(allteam[position[0]]);
+
+            //Save Stage to WebStorage
+            saveStage(position[0], position[1]);
 
             //Here is to rerank for there new position
             allteam = rerank(allteam);
@@ -108,7 +181,6 @@ controllers.scoreboardCtrl = function ($scope) {
             // Update allteam to SCOPE
             $scope.teams = allteam.slice();
             
-            console.log("Rerank");
 
             //Scroll Window to the right position
             var target = $("#" + position[0]);
@@ -325,7 +397,7 @@ function rerank(Data){
         } else if(aPoints != bPoints) {
             // Then sort by lower points
             return ((aPoints < bPoints) ? -1 : ((aPoints > bPoints) ? 1 : 0));
-        } else if(aTotalAttempts != bTotalAttempts && aPoints !== 0) {
+        } else if(aTotalAttempts != bTotalAttempts && aPoints !== 0 && aPoints !== bPoints) {
             // Then sort by lower total attempts
             return ((aTotalAttempts < bTotalAttempts) ? -1 : ((aTotalAttempts > bTotalAttempts) ? 1 : 0));
         } else {
