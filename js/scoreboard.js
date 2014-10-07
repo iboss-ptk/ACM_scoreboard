@@ -18,6 +18,9 @@ app.directive('shortcut', function() {
 
 
 controllers.scoreboardCtrl = function ($scope) {
+    // Set Team height here
+    var teamHeight = 30;
+    $scope.teamHeight = teamHeight;
 
 	//score data must be replaced later
     xmlDoc=loadXMLDoc("results.xml");
@@ -27,7 +30,9 @@ controllers.scoreboardCtrl = function ($scope) {
     allteam_temp = getAllTeam(score_before);
     allteam = [];
     $.each(allteam_temp, function(index, val) {
+        val["showrank"] = val["rank"];
         val["rank"] = index;
+        val["z"] = 0;
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
@@ -49,23 +54,30 @@ controllers.scoreboardCtrl = function ($scope) {
 
     // Get number of the problem
     numberOfProblem = getNumOfProblem(score_before);
-    
-    
-  
 
-
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-
-            var position = findLastToOpen(allteam);
-            // position[0] is Team Index in allteam variable
-            // position[1] is ProblemId  that has to be opened
+    //Attach open function to Scope
+    $scope.opentag = function(position){            
+            // -- position[0] is Team Index in allteam variable --
+            // -- position[1] is ProblemId  that has to be opened --
+            //Check is this already opene or not. If it already opend return;
+            if(allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] == true) return;
             // Find Team index in After Score
             afterTeamIndex = getTeamIndexByID(allteam_after, allteam[position[0]]["teamId"]);
             var problemItem = allteam_after[afterTeamIndex]["problemSummaryInfo"][position[1]];
             var isSolved = problemItem["isSolved"];
             var attempts = parseInt(problemItem["attempts"]);
             var solutionTime = parseInt(problemItem["solutionTime"]);
+
+            //Scroll Window to team original position
+            var winhigh = $(window).height();
+            var pagetop = $(window).scrollTop();
+            var targettop = $("#" + position[0]).offset().top;
+            if(Math.abs(pagetop - targettop) > winhigh) {
+                $('html, body').animate({
+                    scrollTop: allteam[position[0]]["rank"]*teamHeight + 100
+                }, 100);
+            }
+
             //Check is Solved or not
             if(isSolved == "true") {
                 allteam[position[0]]["solved"] = parseInt(allteam[position[0]]["solved"]) + 1 + ""; //Add number of solved items
@@ -82,17 +94,47 @@ controllers.scoreboardCtrl = function ($scope) {
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                          
             }
+
+            //Set Z index of current team and add shadow
+            allteam[position[0]]["z"] = 100;
+            allteam[position[0]]["stylingClass"] = "shadow";
             // console.log(position);
             // console.log(allteam[position[0]]);
+
+            //Here is to rerank for there new position
             allteam = rerank(allteam);
 
 
             // Update allteam to SCOPE
             $scope.teams = allteam.slice();
-
-
             
+            console.log("Rerank");
 
+            //Scroll Window to the right position
+            var target = $("#" + position[0]);
+            $('html, body').animate({
+                scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+            }, 500);
+
+            //Remove Shadow
+            setTimeout(function(){
+                allteam[position[0]]["stylingClass"] = "";
+                allteam[position[0]]["z"] = 0;
+                $scope.$apply();
+            }, 2000);
+            
+    };
+  
+
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+
+            var position = findLastToOpen(allteam);
+            //Call opentag function
+            $scope.opentag(position); 
+            $scope.$apply();
+            return;
         }
     });
 }
@@ -278,12 +320,12 @@ function rerank(Data){
         aTotalAttempts = parseInt(a["totalAttempts"]);
         bTotalAttempts = parseInt(b["totalAttempts"]);
         if(aSolved != bSolved) {        
-            //Sort by number of items solved first
+            //Sort by number of items that were solved first
             return ((aSolved > bSolved) ? -1 : ((aSolved < bSolved) ? 1 : 0));
         } else if(aPoints != bPoints) {
             // Then sort by lower points
             return ((aPoints < bPoints) ? -1 : ((aPoints > bPoints) ? 1 : 0));
-        } else if(aTotalAttempts != bTotalAttempts) {
+        } else if(aTotalAttempts != bTotalAttempts && aPoints !== 0) {
             // Then sort by lower total attempts
             return ((aTotalAttempts < bTotalAttempts) ? -1 : ((aTotalAttempts > bTotalAttempts) ? 1 : 0));
         } else {
@@ -292,9 +334,20 @@ function rerank(Data){
         }
     });
     
-    // Put rank to attribute Rank
-    for (var i = Data.length - 1; i >= 0; i--) {
-        Data[i]["rank"] = i+1;
+    // Put rank to attribute "rank" and to attribute "showrank"
+    var index = 1;
+    var lastpoint = -1;
+    var lastsolved = -1;
+    for (var i = 0; i <= Data.length - 1; i++) {
+        if(lastpoint == Data[i]["points"] && lastsolved == Data[i]["solved"]){
+            Data[i]["showrank"] = index;
+        } else {
+            Data[i]["showrank"] = i + 1;
+            index = i + 1;
+        }
+        lastpoint = Data[i]["points"];
+        lastsolved = Data[i]["solved"];
+        Data[i]["rank"] = i + 1;
     }
 
     // Sort back by Index
@@ -303,7 +356,7 @@ function rerank(Data){
         bIndex = parseInt(b["index"]);
         return ((aIndex < bIndex) ? -1 : ((aIndex > bIndex) ? 1 : 0));
     });
-    console.log(Data);
+    //console.log(Data);
 
     return Data;
 
