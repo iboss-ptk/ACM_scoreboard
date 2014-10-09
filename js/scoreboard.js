@@ -175,36 +175,28 @@ controllers.scoreboardCtrl = function ($scope) {
             //Save Stage to WebStorage
             saveStage(position[0], position[1]);
 
-            if(isSolved == "true"){
+            /*if(isSolved == "true"){
+
                 setTimeout(function(){
                     //Here is to rerank for there new position
                     allteam = rerank(allteam); 
 
                     // Update allteam to SCOPE
-                    $scope.teams = allteam.slice();
+                    //$scope.teams = allteam.slice();
 
                     
                     //Scroll Window to the right position
-                    var timeConst = 200 * (parseInt(prevRank) - parseInt(allteam[position[0]]["rank"]) - 1);
+                    var timeConst = 30 * (parseInt(allteam[position[0]]["rank"]) - 1);
                     console.log(timeConst);
                     var target = $("#" + position[0]);
                     $('html, body').delay(timeConst).animate({
                         scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
                     }, 500); 
 
-                }, 10);
+                }, 100);
             } else {
-                //Here is to rerank for there new position
-                allteam = rerank(allteam); 
-
-                // Update allteam to SCOPE
-                $scope.teams = allteam.slice();
-
-                var target = $("#" + position[0]);
-                    $('html, body').animate({
-                        scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
-                    }, 500); 
-            }
+                
+            }*/
 
             
             // setTimeout(function(){
@@ -224,6 +216,16 @@ controllers.scoreboardCtrl = function ($scope) {
 
             // }, 500);
 
+            //Here is to rerank for there new position
+            allteam = rerank(allteam); 
+
+            // Update allteam to SCOPE
+            $scope.teams = allteam.slice();
+
+            var target = $("#" + position[0]);
+                $('html, body').animate({
+                    scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+            }, 500); 
 
             
 
