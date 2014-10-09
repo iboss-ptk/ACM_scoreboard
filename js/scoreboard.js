@@ -19,7 +19,7 @@ app.directive('shortcut', function() {
 
 controllers.scoreboardCtrl = function ($scope) {
     // ================== Set Team height here ======================
-    var teamHeight = 30;
+    var teamHeight = 50;
     $scope.teamHeight = teamHeight;
     //===============================================================
 
@@ -79,13 +79,13 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated flip solved"; // Add Styling Class
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated rubberBand solved"; // Add Styling Class
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                         
                     } else {
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated flip attempted";   // Add Styling Class    
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated rubberBand attempted";   // Add Styling Class    
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                                  
                     }
@@ -157,13 +157,13 @@ controllers.scoreboardCtrl = function ($scope) {
                 allteam[position[0]]["points"] = parseInt(allteam[position[0]]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                 allteam[position[0]]["totalAttempts"] = parseInt(allteam[position[0]]["totalAttempts"]) - parseInt(allteam[position[0]]["problemSummaryInfo"][position[1]]["attempts"]) + attempts + ""; //Update team's totalAttempts
                 allteam[position[0]]["problemSummaryInfo"][position[1]] = problemItem; //Update problemItem;
-                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated flip solved"; // Add Styling Class
+                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated rubberBand solved"; // Add Styling Class
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                 
             } else {
                 allteam[position[0]]["totalAttempts"] = parseInt(allteam[position[0]]["totalAttempts"]) - parseInt(allteam[position[0]]["problemSummaryInfo"][position[1]]["attempts"]) + attempts + ""; //Update team's totalAttempts
                 allteam[position[0]]["problemSummaryInfo"][position[1]] = problemItem; //Update problemItem;
-                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated flip attempted";   // Add Styling Class    
+                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated rubberBand attempted";   // Add Styling Class    
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                          
             }
