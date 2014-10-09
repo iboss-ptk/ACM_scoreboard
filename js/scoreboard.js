@@ -139,6 +139,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var isSolved = problemItem["isSolved"];
             var attempts = parseInt(problemItem["attempts"]);
             var solutionTime = parseInt(problemItem["solutionTime"]);
+            var prevRank = allteam[position[0]]["rank"];
 
             //Scroll Window to team original position
             var winhigh = $(window).height();
@@ -174,19 +175,57 @@ controllers.scoreboardCtrl = function ($scope) {
             //Save Stage to WebStorage
             saveStage(position[0], position[1]);
 
-            //Here is to rerank for there new position
-            allteam = rerank(allteam);
+            if(isSolved == "true"){
+                setTimeout(function(){
+                    //Here is to rerank for there new position
+                    allteam = rerank(allteam); 
 
+                    // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
 
-            // Update allteam to SCOPE
-            $scope.teams = allteam.slice();
+                    
+                    //Scroll Window to the right position
+                    var timeConst = 200 * (parseInt(prevRank) - parseInt(allteam[position[0]]["rank"]) - 1);
+                    console.log(timeConst);
+                    var target = $("#" + position[0]);
+                    $('html, body').delay(timeConst).animate({
+                        scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+                    }, 500); 
+
+                }, 10);
+            } else {
+                //Here is to rerank for there new position
+                allteam = rerank(allteam); 
+
+                // Update allteam to SCOPE
+                $scope.teams = allteam.slice();
+
+                var target = $("#" + position[0]);
+                    $('html, body').animate({
+                        scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+                    }, 500); 
+            }
+
             
+            // setTimeout(function(){
+            //     //Here is to rerank for there new position
+            //     allteam = rerank(allteam); 
 
-            //Scroll Window to the right position
-            var target = $("#" + position[0]);
-            $('html, body').animate({
-                scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
-            }, 500);
+            //     // Update allteam to SCOPE
+            //     $scope.teams = allteam.slice();
+
+
+            //     //Scroll Window to the right position
+            //     var target = $("#" + position[0]);
+            //     $('html, body').animate({
+            //         scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+            //     }, 500); 
+
+
+            // }, 500);
+
+
+            
 
             //Remove Shadow
             setTimeout(function(){
