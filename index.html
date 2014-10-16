@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
 </head>
-<body background = "img/bg.png" style="background-attachment:fixed;background-position:center;" ng-keypress="startMove">
+<!-- <body background = "img/bg.png" style="background-attachment:fixed;background-position:center;" ng-keypress="startMove"> -->
+<body style="background-color:rgba(52, 73, 94,1.0);" ng-keypress="startMove">
   <span class ="logo"><div class = "animated bounceInLeft"><img src = "img/ACMLOGO_CONTEST.png"/> </div><span>
     <div class="container" ng-controller="scoreboardCtrl">
       <div class = "animated fadeInDown">
-        <div style="position:absolute; top: -30px;">
-          <button class="btn btn-primary" ng-click="resumeStages()">Resume Stage</button>
-          <button class="btn btn-danger" ng-click="clearStage()">Clear Stage</button>          
+        <div style="position:absolute; top: -40px; text-align:right; width: 108.5%">
+          <button class="btn btn-primary" ng-click="resumeStages(0)">Resume Stage</button>
+          <button class="btn btn-danger" ng-click="clearStage()">Clear Stage</button>
+          <button class="btn btn-warning" ng-click="resumeStages(15)">Last 15 teams</button>          
         </div>
         <table class = "table">
           <thead>
@@ -25,13 +27,13 @@
               <td ng-repeat="item in header" class="problemcell">{{item.title}}</td>
             </tr>
           </thead>
-            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*teamHeight}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
+            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*(teamHeight + 5) + 12}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
                 <!--<td>{{team.totalAttempts}}</td>-->
                 <td ng-bind="team.showrank" class="rankcell"></td>
-                <td ng-bind="team.teamName" class="namecell" ></td>
+                <td ng-bind="team.teamName" class="namecell" style="font-size:14px;"></td>
                 <td ng-bind="team.solved" class="solvedcell"></td>
                 <td ng-bind="team.points" class="subpointcell"></td>
-                <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index-1}} {{item.problemStylingClass}}" ng-click="opentag([team.index, item.index - 1])"> 
+                <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index-1}} {{item.problemStylingClass}}"  ng-click="opentag([team.index, item.index - 1])"> 
                   <!-- CLASS = problemcell insert index-1 leaw dai  XML SAYS <problemSummaryInfo index="1 to 8" -->
                   <!-- Loop can Run 0 to 7 SO ITEM.INDEX-1 -->
                   <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 

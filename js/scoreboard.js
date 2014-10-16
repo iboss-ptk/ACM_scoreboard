@@ -19,7 +19,7 @@ app.directive('shortcut', function() {
 
 controllers.scoreboardCtrl = function ($scope) {
     // ================== Set Team height here ======================
-    var teamHeight = 50;
+    var teamHeight = 70;
     $scope.teamHeight = teamHeight;
     //===============================================================
 
@@ -57,9 +57,47 @@ controllers.scoreboardCtrl = function ($scope) {
 
     
     //Resuem stages function
-    $scope.resumeStages = function(){
+    $scope.resumeStages = function(num){
         var stages = localStorage.stages;
-        if(stages !== undefined){
+        if(num != 0){
+            var position = findLastToOpen(allteam);
+            while(position[0] !== num){
+                position = findLastToOpen(allteam);
+                team = position[0];
+                problem = position[1];
+                if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true) return;
+                    // Find Team index in After Score
+                    afterTeamIndex = getTeamIndexByID(allteam_after, allteam[team]["teamId"]);
+                    var problemItem = allteam_after[afterTeamIndex]["problemSummaryInfo"][problem];
+                    var isSolved = problemItem["isSolved"];
+                    var attempts = parseInt(problemItem["attempts"]);
+                    var solutionTime = parseInt(problemItem["solutionTime"]);
+
+                    //Check is Solved or not
+                    if(isSolved == "true") {
+                        allteam[team]["solved"] = parseInt(allteam[team]["solved"]) + 1 + ""; //Add number of solved items
+                        allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
+                        allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+                        allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                        
+                    } else {
+                        allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "attemptedanim";   // Add Styling Class    
+                        allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                                 
+                    }
+
+
+                   // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
+
+                    allteam = rerank(allteam);
+            }
+        }
+        else if(stages !== undefined){
             stages = JSON.parse(stages);
             $.each(stages, function(team, problems) {
                 /* iterate through array or object */
@@ -79,13 +117,13 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated rubberBand solved"; // Add Styling Class
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                         
                     } else {
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "animated rubberBand attempted";   // Add Styling Class    
+                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "attemptedanim";   // Add Styling Class    
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                                  
                     }
@@ -100,6 +138,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
         allteam = rerank(allteam);
     }
+
 
     $scope.clearStage = function(){
         alert("Stage was clear !!!");
@@ -125,10 +164,9 @@ controllers.scoreboardCtrl = function ($scope) {
 
     }
 
-   // $scope.resumeStages();
-
+    var finish = 1;
     //Attach open function to Scope
-    $scope.opentag = function(position){            
+    $scope.opentag = function(position){       
             // -- position[0] is Team Index in allteam variable --
             // -- position[1] is ProblemId  that has to be opened --
             //Check is this already opene or not. If it already opend return;
@@ -145,11 +183,11 @@ controllers.scoreboardCtrl = function ($scope) {
             var winhigh = $(window).height();
             var pagetop = $(window).scrollTop();
             var targettop = $("#" + position[0]).offset().top;
-            if(Math.abs(pagetop - targettop) > winhigh) {
+            //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*teamHeight + 100
-                }, 100);
-            }
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + 112
+                }, 300);
+           // }
 
             //Check is Solved or not
             if(isSolved == "true") {
@@ -157,13 +195,13 @@ controllers.scoreboardCtrl = function ($scope) {
                 allteam[position[0]]["points"] = parseInt(allteam[position[0]]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                 allteam[position[0]]["totalAttempts"] = parseInt(allteam[position[0]]["totalAttempts"]) - parseInt(allteam[position[0]]["problemSummaryInfo"][position[1]]["attempts"]) + attempts + ""; //Update team's totalAttempts
                 allteam[position[0]]["problemSummaryInfo"][position[1]] = problemItem; //Update problemItem;
-                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated rubberBand solved"; // Add Styling Class
+                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "solvedanim"; // Add Styling Class
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                 
             } else {
                 allteam[position[0]]["totalAttempts"] = parseInt(allteam[position[0]]["totalAttempts"]) - parseInt(allteam[position[0]]["problemSummaryInfo"][position[1]]["attempts"]) + attempts + ""; //Update team's totalAttempts
                 allteam[position[0]]["problemSummaryInfo"][position[1]] = problemItem; //Update problemItem;
-                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "animated rubberBand attempted";   // Add Styling Class    
+                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "attemptedanim";   // Add Styling Class    
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                          
             }
@@ -198,43 +236,70 @@ controllers.scoreboardCtrl = function ($scope) {
                 
             }*/
 
+            if(isSolved == "true"){
+                setTimeout(function(){
+                    //Here is to rerank for there new position
+                    allteam = rerank(allteam); 
+
+                    // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
+
+
+                    //Scroll Window to the right position
+                    
+                    var target = $("#" + position[0]);
+                    $('html, body').delay(1500).animate({
+                        scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
+                    }, 1000); 
+                        
+                    
+
+
+                }, 1000);
+                //Remove Shadow
+                setTimeout(function(){
+                    allteam[position[0]]["stylingClass"] = "";
+                    allteam[position[0]]["z"] = 0;
+                    $scope.$apply();
+                    finish = 1;
+                    // alert(finish);
+                }, 3000);
+            } else {
+                //Here is to rerank for there new position
+                    allteam = rerank(allteam); 
+
+                    // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
+
+                    var target = $("#" + position[0]);
+                        $('html, body').animate({
+                            scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
+                        }, 200); 
+
+                //Remove Shadow
+                setTimeout(function(){
+                    allteam[position[0]]["stylingClass"] = "";
+                    allteam[position[0]]["z"] = 0;
+                    $scope.$apply();
+                    finish = 1;
+                }, 1000);
+            }
             
-            // setTimeout(function(){
-            //     //Here is to rerank for there new position
-            //     allteam = rerank(allteam); 
-
-            //     // Update allteam to SCOPE
-            //     $scope.teams = allteam.slice();
-
-
-            //     //Scroll Window to the right position
-            //     var target = $("#" + position[0]);
-            //     $('html, body').animate({
-            //         scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
-            //     }, 500); 
-
-
-            // }, 500);
 
             //Here is to rerank for there new position
-            allteam = rerank(allteam); 
+            //allteam = rerank(allteam); 
 
             // Update allteam to SCOPE
-            $scope.teams = allteam.slice();
+            // $scope.teams = allteam.slice();
 
-            var target = $("#" + position[0]);
-                $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
-            }, 500); 
+            // var target = $("#" + position[0]);
+            //     $('html, body').animate({
+            //         scrollTop: allteam[position[0]]["rank"] * teamHeight + 100
+            // }, 500); 
 
             
 
-            //Remove Shadow
-            setTimeout(function(){
-                allteam[position[0]]["stylingClass"] = "";
-                allteam[position[0]]["z"] = 0;
-                $scope.$apply();
-            }, 2000);
+            
             
     };
   
@@ -243,6 +308,8 @@ controllers.scoreboardCtrl = function ($scope) {
     $(document).keypress(function(e) {
         if(e.which == 13) {
 
+            if(finish == 0) return;
+            else finish = 0;
             var position = findLastToOpen(allteam);
             //Call opentag function
             $scope.opentag(position); 
@@ -373,14 +440,14 @@ function addToOpen(Data_before, Data_after){
             if(Data_before[i]["problemSummaryInfo"][j]["attempts"] < Data_after[afterTeamId]["problemSummaryInfo"][j]["attempts"]){
                 //Something need to be opened in the future
                 Data_before[i]["problemSummaryInfo"][j]["isOpened"] = false;
-                Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "animated fadeInDown toopen";
+                Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own toopen";
             } else {
                 // Nothing need to be opened
                 Data_before[i]["problemSummaryInfo"][j]["isOpened"] = true;
                 if(Data_before[i]["problemSummaryInfo"][j]["isSolved"] == "true")
-                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "animated fadeInDown solved";
+                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own solved";
                 else if(Data_before[i]["problemSummaryInfo"][j]["attempts"] > 0)
-                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "animated fadeInDown attempted";
+                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own attempted";
             }
         }
     }
