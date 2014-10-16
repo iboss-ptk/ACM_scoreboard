@@ -24,7 +24,7 @@ controllers.scoreboardCtrl = function ($scope) {
     //===============================================================
 
     //score data must be replaced later
-    xmlDoc=loadXMLDoc("results.xml");
+    xmlDoc=loadXMLDoc("results-recent-before.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     // Reconstruct Teams data
@@ -37,7 +37,7 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
-    xmlDoc=loadXMLDoc("results-new.xml");
+    xmlDoc=loadXMLDoc("results-recent-after.xml");
     score_after = xmlToJson(xmlDoc);
     allteam_after_temp = getAllTeam(score_after);
     allteam_after = [];
@@ -62,7 +62,6 @@ controllers.scoreboardCtrl = function ($scope) {
         if(num != 0){
             var position = findLastToOpen(allteam);
             while(position[0] !== num){
-                position = findLastToOpen(allteam);
                 team = position[0];
                 problem = position[1];
                 if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true) return;
@@ -95,6 +94,8 @@ controllers.scoreboardCtrl = function ($scope) {
                     $scope.teams = allteam.slice();
 
                     allteam = rerank(allteam);
+                    console.log(team);
+                position = findLastToOpen(allteam);
             }
         }
         else if(stages !== undefined){
@@ -141,7 +142,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
 
     $scope.clearStage = function(){
-        alert("Stage was clear !!!");
+        alert("Stage was cleared !!!");
         localStorage.clear();
     }
 
@@ -182,7 +183,7 @@ controllers.scoreboardCtrl = function ($scope) {
             //Scroll Window to team original position
             var winhigh = $(window).height();
             var pagetop = $(window).scrollTop();
-            var targettop = $("#" + position[0]).offset().top;
+            var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
                     scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + 112

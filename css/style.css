@@ -23,6 +23,8 @@ body {
 table{
 
 	/*font-family: cursive;*/
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
 	color:white;
 	font-weight: bold;
 	margin-left: -95px;
