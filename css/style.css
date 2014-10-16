@@ -191,8 +191,16 @@ tr{
 	border-right: 1px solid #E3E21B;
 	border-left: 1px solid #E3E21B;
 	color:#f96f00;
-
 }
+
+.toopen:hover {
+	background-color: #FFFE94;
+	border-bottom: 10px solid #E3E25D;
+	border-right: 1px solid #E3E25D;
+	border-left: 1px solid #E3E25D;
+	color:#f96f00;
+}
+
 .container{
 }
 
