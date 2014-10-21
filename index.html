@@ -24,13 +24,13 @@
               <td class="rankcell" >Rank</td>
               <td class="namecell">Team Name</td>
               <td colspan=2 class="pointcell">Points</td>
-              <td ng-repeat="item in header" class="problemcell">{{item.title}}</td>
+              <td ng-repeat="item in problems" class="problemcell">{{item.title}}</td>
             </tr>
           </thead>
-            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*(teamHeight + 5) + 12}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
+            <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*(teamHeight + 5) + headerOffset}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
                 <!--<td>{{team.totalAttempts}}</td>-->
                 <td ng-bind="team.showrank" class="rankcell"></td>
-                <td ng-bind="team.teamName" class="namecell" style="font-size:14px;"></td>
+                <td ng-bind="team.teamName" class="namecell" style=""></td>
                 <td ng-bind="team.solved" class="solvedcell"></td>
                 <td ng-bind="team.points" class="subpointcell"></td>
                 <td ng-repeat="item in team.problemSummaryInfo" class="problemcell problem{{item.index-1}} {{item.problemStylingClass}}"  ng-click="opentag([team.index, item.index - 1])"> 

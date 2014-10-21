@@ -22,11 +22,17 @@ controllers.scoreboardCtrl = function ($scope) {
     var teamHeight = 70;
     $scope.teamHeight = teamHeight;
     //===============================================================
+    $scope.headerOffset = 12;
+    var loadedLastTeam = 0;
 
     //score data must be replaced later
-    xmlDoc=loadXMLDoc("results-recent-before.xml");
+    xmlDoc=loadXMLDoc("results.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
+    $scope.problems = [];
+    $.each($scope.header, function(index, val) {
+        $scope.problems.push(val);
+    });
     // Reconstruct Teams data
     allteam_temp = getAllTeam(score_before);
     allteam = [];
@@ -37,7 +43,7 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
-    xmlDoc=loadXMLDoc("results-recent-after.xml");
+    xmlDoc=loadXMLDoc("results-new.xml");
     score_after = xmlToJson(xmlDoc);
     allteam_after_temp = getAllTeam(score_after);
     allteam_after = [];
@@ -47,7 +53,7 @@ controllers.scoreboardCtrl = function ($scope) {
     });
 
     //Add Parameter to Pending Item
-    allteam = addToOpen(allteam, allteam_after);
+    allteam = addToOpen(allteam, allteam_after, $scope.header);
     // console.log(allteam);
     //Initialize Teams' Details to Scope
     $scope.teams = allteam.slice();
@@ -55,11 +61,26 @@ controllers.scoreboardCtrl = function ($scope) {
     // Get number of the problem
     numberOfProblem = getNumOfProblem(score_before);
 
+    $(window).scroll(function(event) {
+        //Scroll Window to team original position
+        var tabletop = $("table").offset().top;
+        var pagetop = $(window).scrollTop();
+        var headerOffset = 0;
+        if(tabletop + $scope.headerOffset < pagetop) {
+            $("thead").css('top', pagetop - tabletop);
+            $("thead > tr").addClass('headershadow');
+        } else {
+            $("thead").css('top', $scope.headerOffset);
+            $("thead > tr").removeClass('headershadow');
+        }
+    });
+
     
     //Resuem stages function
     $scope.resumeStages = function(num){
         var stages = localStorage.stages;
-        if(num != 0){
+        if(num != 0 && loadedLastTeam == 0){
+            loadedLastTeam = 1;
             var position = findLastToOpen(allteam);
             while(position[0] !== num){
                 team = position[0];
@@ -78,7 +99,12 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+                        // console.log($scope.header[problem + 1]);
+                        if($scope.header[problem + 1]['bestSolutionTime'] == solutionTime)
+                            allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
+                        else 
+                            allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                         
                     } else {
@@ -94,7 +120,6 @@ controllers.scoreboardCtrl = function ($scope) {
                     $scope.teams = allteam.slice();
 
                     allteam = rerank(allteam);
-                    console.log(team);
                 position = findLastToOpen(allteam);
             }
         }
@@ -103,7 +128,6 @@ controllers.scoreboardCtrl = function ($scope) {
             $.each(stages, function(team, problems) {
                 /* iterate through array or object */
                 $.each(problems, function(problem, val) {
-
                     if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true || val !== 1) return;
                     // Find Team index in After Score
                     afterTeamIndex = getTeamIndexByID(allteam_after, allteam[team]["teamId"]);
@@ -118,7 +142,10 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+                        if($scope.header[problem]['bestSolutionTime'] == solutionTime)
+                            allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
+                        else 
+                            allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
                         allteam[team]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
                         
                     } else {
@@ -186,7 +213,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + 112
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + 100 + $scope.headerOffset
                 }, 300);
            // }
 
@@ -196,7 +223,10 @@ controllers.scoreboardCtrl = function ($scope) {
                 allteam[position[0]]["points"] = parseInt(allteam[position[0]]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                 allteam[position[0]]["totalAttempts"] = parseInt(allteam[position[0]]["totalAttempts"]) - parseInt(allteam[position[0]]["problemSummaryInfo"][position[1]]["attempts"]) + attempts + ""; //Update team's totalAttempts
                 allteam[position[0]]["problemSummaryInfo"][position[1]] = problemItem; //Update problemItem;
-                allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+                if($scope.header[position[1] + 1]['bestSolutionTime'] == solutionTime)
+                    allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
+                else 
+                    allteam[position[0]]["problemSummaryInfo"][position[1]]["problemStylingClass"] = "solvedanim"; // Add Styling Class
                 allteam[position[0]]["problemSummaryInfo"][position[1]]["isOpened"] = true; //Set that this Problem is already opened
                 
             } else {
@@ -248,10 +278,10 @@ controllers.scoreboardCtrl = function ($scope) {
 
                     //Scroll Window to the right position
                     
-                    var target = $("#" + position[0]);
-                    $('html, body').delay(1500).animate({
-                        scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
-                    }, 1000); 
+                    // var target = $("#" + position[0]);
+                    // $('html, body').delay(1500).animate({
+                    //     scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
+                    // }, 1000); 
                         
                     
 
@@ -272,10 +302,10 @@ controllers.scoreboardCtrl = function ($scope) {
                     // Update allteam to SCOPE
                     $scope.teams = allteam.slice();
 
-                    var target = $("#" + position[0]);
-                        $('html, body').animate({
-                            scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
-                        }, 200); 
+                    // var target = $("#" + position[0]);
+                    //     $('html, body').animate({
+                    //         scrollTop: allteam[position[0]]["rank"] * (teamHeight + 5) + 112
+                    //     }, 200); 
 
                 //Remove Shadow
                 setTimeout(function(){
@@ -379,7 +409,7 @@ function getProblemItems(Data) {
         var problem_id = problems[i]['@attributes']['id']
         problem[problem_id] = {};
         problem[problem_id]['title'] = problems[i]['@attributes']['title'];
-        problem[problem_id]['bestSolutionTime'] = problems[i]['@attributes']['bestSolutionTime'];      
+        problem[problem_id]['bestSolutionTime'] = problems[i]['@attributes']['bestSolutionTime'];
     }
     return problem;
 }
@@ -432,23 +462,28 @@ function getTeamByID2(Data,id){
 }
 
 // Function to find pending problem for all team
-function addToOpen(Data_before, Data_after){
+function addToOpen(Data_before, Data_after, problemInfo){
     var numberOfProblem = Data_before[0]["problemSummaryInfo"].length;
     for (var i = Data_before.length - 1; i >= 0; i--) {
         //Find Index of Team with same ID
-        var afterTeamId= getTeamIndexByID(Data_after, Data_before[i]["teamId"]);
+        var afterTeamId = getTeamIndexByID(Data_after, Data_before[i]["teamId"]);
         for(var j = 0; j < numberOfProblem; j ++) {
             if(Data_before[i]["problemSummaryInfo"][j]["attempts"] < Data_after[afterTeamId]["problemSummaryInfo"][j]["attempts"]){
                 //Something need to be opened in the future
                 Data_before[i]["problemSummaryInfo"][j]["isOpened"] = false;
-                Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own toopen";
+                Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "toopen";
             } else {
                 // Nothing need to be opened
                 Data_before[i]["problemSummaryInfo"][j]["isOpened"] = true;
-                if(Data_before[i]["problemSummaryInfo"][j]["isSolved"] == "true")
-                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own solved";
+                if(Data_before[i]["problemSummaryInfo"][j]["isSolved"] == "true"){
+                    if(problemInfo[j + 1]["bestSolutionTime"] == Data_before[i]["problemSummaryInfo"][j]["solutionTime"])
+                        Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "solvedfirst";
+                    else
+                        Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "solved";
+
+                }
                 else if(Data_before[i]["problemSummaryInfo"][j]["attempts"] > 0)
-                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "own attempted";
+                    Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "attempted";
             }
         }
     }
