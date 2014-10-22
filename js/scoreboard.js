@@ -82,7 +82,8 @@ controllers.scoreboardCtrl = function ($scope) {
         if(num != 0 && loadedLastTeam == 0){
             loadedLastTeam = 1;
             var position = findLastToOpen(allteam);
-            while(position[0] !== num){
+            
+            while(position[0] >= num){
                 team = position[0];
                 problem = position[1];
                 if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true) return;
@@ -167,7 +168,14 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam = rerank(allteam);
     }
 
-
+    $scope.setStage = function(){
+        var st=prompt("Enter stage");
+        
+        if(st>0){
+            $scope.resumeStages(st);
+        }
+        
+    }
     $scope.clearStage = function(){
         alert("Stage was cleared !!!");
         localStorage.clear();
@@ -213,7 +221,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + 100 + $scope.headerOffset
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 1) + 100 + $scope.headerOffset
                 }, 300);
            // }
 
@@ -342,8 +350,13 @@ controllers.scoreboardCtrl = function ($scope) {
             if(finish == 0) return;
             else finish = 0;
             var position = findLastToOpen(allteam);
-            //Call opentag function
-            $scope.opentag(position); 
+            if(typeof(position) == "undefined")
+                 $('html, body').animate({
+                    scrollTop: 0
+                }, 300);
+            else 
+                //Call opentag function
+                $scope.opentag(position); 
             $scope.$apply();
             return;
         }
