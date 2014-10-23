@@ -222,7 +222,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 1) + 100 + $scope.headerOffset
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 1) + $scope.headerOffset
                 }, 300);
            // }
 
