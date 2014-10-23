@@ -250,6 +250,7 @@ tr{
 	border-right: 1px solid #E3E25D;
 	border-left: 1px solid #E3E25D;
 	color:#f96f00;
+	cursor: pointer;
 }
 
 .container{
