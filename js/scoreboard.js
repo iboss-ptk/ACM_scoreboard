@@ -100,8 +100,8 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        // console.log($scope.header[problem + 1]);
-                        if($scope.header[problem + 1]['bestSolutionTime'] == solutionTime)
+                        // console.log($scope.header[parseInt(problem) + 1]);
+                        if($scope.header[parseInt(problem) + 1]['bestSolutionTime'] == solutionTime)
                             allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
                         else 
                             allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
@@ -143,7 +143,7 @@ controllers.scoreboardCtrl = function ($scope) {
                         allteam[team]["points"] = parseInt(allteam[team]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
                         allteam[team]["totalAttempts"] = parseInt(allteam[team]["totalAttempts"]) - parseInt(allteam[team]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
                         allteam[team]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
-                        if($scope.header[problem]['bestSolutionTime'] == solutionTime)
+                        if($scope.header[parseInt(problem) + 1]['bestSolutionTime'] == solutionTime)
                             allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
                         else 
                             allteam[team]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
@@ -163,6 +163,7 @@ controllers.scoreboardCtrl = function ($scope) {
                 });
 
             });
+
         }
 
         allteam = rerank(allteam);
