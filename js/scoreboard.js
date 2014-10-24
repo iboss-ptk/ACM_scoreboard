@@ -40,6 +40,7 @@ controllers.scoreboardCtrl = function ($scope) {
         val["showrank"] = val["rank"];
         val["rank"] = index;
         val["z"] = 0;
+        val["stylingClass"] = "";
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
@@ -84,6 +85,13 @@ controllers.scoreboardCtrl = function ($scope) {
             var position = findLastToOpen(allteam);
             
             while(position[0] >= num){
+                if(allteam[position[0]]["rank"] <= lastTeamOpened){
+                    openLastGray(allteam, lastTeamOpened);
+                    lastTeamOpened--;
+                    finish = 1;
+                    continue;
+                    // console.log(lastTeamOpened);
+                }
                 team = position[0];
                 problem = position[1];
                 if(allteam[team]["problemSummaryInfo"][problem]["isOpened"] == true) return;
@@ -163,6 +171,19 @@ controllers.scoreboardCtrl = function ($scope) {
                 });
 
             });
+            var position = findLastToOpen(allteam);
+            console.log(position);
+            if(typeof(position) == "undefined") {position = []; position[0] = 0; }      
+            while(lastTeamOpened >= 0){
+                if(allteam[position[0]]["rank"] <= lastTeamOpened){
+                    openLastGray(allteam, lastTeamOpened);
+                    lastTeamOpened--;
+                    finish = 1;
+                    continue;
+                    // console.log(lastTeamOpened);
+                } else 
+                    break;
+            }
 
         }
 
@@ -222,7 +243,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 1) + $scope.headerOffset
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + $scope.headerOffset
                 }, 300);
            // }
 
@@ -343,21 +364,42 @@ controllers.scoreboardCtrl = function ($scope) {
             
     };
   
+    var lastTeamOpened = allteam.length - 1;
 
 
     $(document).keypress(function(e) {
         if(e.which == 13) {
-
             if(finish == 0) return;
             else finish = 0;
             var position = findLastToOpen(allteam);
-            if(typeof(position) == "undefined")
+            if(typeof(position) == "undefined" && lastTeamOpened >= 0){
+                $('html, body').animate({
+                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset
+                }, 300);
+                console.log("hello");
+                openLastGray(allteam, lastTeamOpened);
+                lastTeamOpened--;
+                finish = 1;
+            }
+            else if(typeof(position) == "undefined") {
                  $('html, body').animate({
                     scrollTop: 0
                 }, 300);
-            else 
+
+            }else if(allteam[position[0]]["rank"] <= lastTeamOpened){
+                $('html, body').animate({
+                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset
+                }, 300);
+                console.log("hello");
+                openLastGray(allteam, lastTeamOpened);
+                lastTeamOpened--;
+                finish = 1;
+                // console.log(lastTeamOpened);
+            } else {
                 //Call opentag function
+                console.log(allteam[position[0]]["rank"]);
                 $scope.opentag(position); 
+            }
             $scope.$apply();
             return;
         }
@@ -377,6 +419,25 @@ function loadXMLDoc(dname){
     xhttp.open("GET",dname,false);
     xhttp.send();
     return xhttp.responseXML;
+}
+
+function openLastGray(Data, position){
+    // Sort by Rank first
+    Data.sort(function(a, b){
+        aRank = parseInt(a["rank"]);
+        bRank = parseInt(b["rank"]);
+        return ((aRank < bRank) ? -1 : ((aRank > bRank) ? 1 : 0));
+    });
+
+    if(Data[position]["stylingClass"] == "")
+        Data[position]["stylingClass"] += " shadowbox";
+    
+    Data.sort(function(a,b) {
+        aIndex = parseInt(a["index"]);
+        bIndex = parseInt(b["index"]);
+        return ((aIndex < bIndex) ? -1 : ((aIndex > bIndex) ? 1 : 0));
+    });
+    return undefined;
 }
 
 //Function for Converting XML to JSON
@@ -414,6 +475,7 @@ xmlToJson = function(xml) {
     }
     return obj;
 }
+
 
 //Get Problem Information
 function getProblemItems(Data) {

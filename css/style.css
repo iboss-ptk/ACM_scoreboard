@@ -233,6 +233,21 @@ tr{
 	color :black;
   }
 }
+
+@-webkit-keyframes gohighlight {
+  0%   { 
+  	
+}
+  50% {
+  	-webkit-box-shadow: 0px 0px 20px 10px white;
+    -moz-box-shadow: 0px 0px 20px 10px white;
+    box-shadow: 0px 0px 20px 10px white;
+    transition: all 0.5s ease;
+  }
+  100% { 
+	
+  }
+}
 .toopen {
 	/*background-color: #f0f06c;*/
 	height: 55px;
@@ -267,4 +282,13 @@ tr{
 	-webkit-box-shadow: 0px 5px 30px -5px rgba(0,0,0,1);
     -moz-box-shadow: 0px 5px 30px -5px rgba(0,0,0,1);
     box-shadow: 0px 5px 30px -5px rgba(0,0,0,1);
+}
+
+.shadowbox {
+	opacity: 0.7;
+
+	-webkit-animation: gohighlight 2s forwards; /* Safari 4+ */
+       -moz-animation:    gohighlight 2s forwards; /* Fx 5+ */
+         -o-animation:      gohighlight 2s forwards; /* Opera 12+ */
+            animation:         gohighlight 2s forwards; /* IE 10+, Fx 29+ */
 }
