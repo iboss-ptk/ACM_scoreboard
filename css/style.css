@@ -129,7 +129,7 @@ tr{
 	border-bottom: 10px solid rgba(192, 57, 43,1.0);
 	border-right: 1px solid rgba(192, 57, 43,1.0);
 	border-left: 1px solid rgba(192, 57, 43,1.0);
-	color :black;
+	color :white;
 }
 
 .attemptedanim {
@@ -156,11 +156,12 @@ tr{
 .solvedfirst {
 	height: 55px;
 
-	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
-	color :black;
+
+	background-color: #FFFE6B;
+	border-bottom: 10px solid #E3E21B;
+	border-right: 1px solid #E3E21B;
+	border-left: 1px solid #E3E21B;
+	color:#f96f00;
 }
 .solvedanim {
 	/*background-color: #C6FFA1;*/
@@ -185,11 +186,11 @@ tr{
 
 @-webkit-keyframes gogreen {
   0%   { 
-  	background-color: #FFFE6B;
-	border-bottom: 10px solid #E3E21B;
-	border-right: 1px solid #E3E21B;
-	border-left: 1px solid #E3E21B;
-	color:#f96f00; 
+  	background-color: #00e5ff;
+	border-bottom: 10px solid #00b8d4;
+	border-right: 1px solid #00b8d4;
+	border-left: 1px solid #00b8d4;
+	color :black;
 }
   100% { 
 	color :white;
@@ -202,11 +203,11 @@ tr{
 
 @-webkit-keyframes gored {
   0%   { 
-  	background-color: #FFFE6B;
-	border-bottom: 10px solid #E3E21B;
-	border-right: 1px solid #E3E21B;
-	border-left: 1px solid #E3E21B;
-	color:#f96f00; 
+  	background-color: #00e5ff;
+	border-bottom: 10px solid #00b8d4;
+	border-right: 1px solid #00b8d4;
+	border-left: 1px solid #00b8d4;
+	color :black;
 }
   100% { 
 	background-color: rgba(231, 76, 60,1.0);
@@ -252,19 +253,20 @@ tr{
 	/*background-color: #f0f06c;*/
 	height: 55px;
 
-	background-color: #FFFE6B;
-	border-bottom: 10px solid #E3E21B;
-	border-right: 1px solid #E3E21B;
-	border-left: 1px solid #E3E21B;
-	color:#f96f00;
+	
+	background-color: #00e5ff;
+	border-bottom: 10px solid #00b8d4;
+	border-right: 1px solid #00b8d4;
+	border-left: 1px solid #00b8d4;
+	color :black;
 }
 
 .toopen:hover {
-	background-color: #FFFE94;
-	border-bottom: 10px solid #E3E25D;
-	border-right: 1px solid #E3E25D;
-	border-left: 1px solid #E3E25D;
-	color:#f96f00;
+	background-color: #00e5ff;
+	border-bottom: 10px solid #00b8d4;
+	border-right: 1px solid #00b8d4;
+	border-left: 1px solid #00b8d4;
+	color :black;
 	cursor: pointer;
 }
 

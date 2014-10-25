@@ -26,7 +26,7 @@ controllers.scoreboardCtrl = function ($scope) {
     var loadedLastTeam = 0;
 
     //score data must be replaced later
-    xmlDoc=loadXMLDoc("results.xml");
+    xmlDoc=loadXMLDoc("results-recent-before.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     $scope.problems = [];
@@ -44,7 +44,7 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
-    xmlDoc=loadXMLDoc("results-new.xml");
+    xmlDoc=loadXMLDoc("results-recent-after.xml");
     score_after = xmlToJson(xmlDoc);
     allteam_after_temp = getAllTeam(score_after);
     allteam_after = [];
