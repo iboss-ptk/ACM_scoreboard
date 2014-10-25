@@ -84,6 +84,11 @@ tr{
 	font-size: 18px;
 	min-width: 150px;
 	max-width: 150px;
+	text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 .pointcell {
 	
@@ -214,7 +219,7 @@ tr{
 	border-bottom: 10px solid rgba(192, 57, 43,1.0);
 	border-right: 1px solid rgba(192, 57, 43,1.0);
 	border-left: 1px solid rgba(192, 57, 43,1.0);
-	color :black;
+	color :white;
   }
 }
 
