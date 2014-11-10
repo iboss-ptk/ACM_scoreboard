@@ -21,10 +21,10 @@
         <table class = "table">
           <thead>
             <tr>
-              <td class="rankcell" >Rank</td>
+              <td class="rankcell" >#</td>
               <td class="namecell">Team Name</td>
               <td colspan=2 class="pointcell">Points</td>
-              <td ng-repeat="item in problems" class="problemcell">{{item.title}}</td>
+              <td ng-repeat="item in problems" class="problemcell" title="{{item.title}}">{{item.head}}</td>
             </tr>
           </thead>
             <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*(teamHeight + 5) + headerOffset}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
@@ -37,9 +37,9 @@
                   <!-- CLASS = problemcell insert index-1 leaw dai  XML SAYS <problemSummaryInfo index="1 to 8" -->
                   <!-- Loop can Run 0 to 7 SO ITEM.INDEX-1 -->
                   <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
-                    <span ng-show="{{item.isSolved}}">
+                    <!-- <span ng-show="{{item.isSolved}}">
                       ({{item.solutionTime}}+{{(item.attempts-1) * 20}})
-                    </span>
+                    </span> -->
                   </span>
                 </td>
             </tr>

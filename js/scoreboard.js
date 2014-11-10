@@ -19,7 +19,7 @@ app.directive('shortcut', function() {
 
 controllers.scoreboardCtrl = function ($scope) {
     // ================== Set Team height here ======================
-    var teamHeight = 70;
+    var teamHeight = 60;
     $scope.teamHeight = teamHeight;
     //===============================================================
     $scope.headerOffset = 12;
@@ -243,7 +243,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
             //if(Math.abs(pagetop - targettop) > winhigh - 200) {
                 $('html, body').animate({
-                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + $scope.headerOffset
+                    scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
            // }
 
@@ -374,7 +374,7 @@ controllers.scoreboardCtrl = function ($scope) {
             var position = findLastToOpen(allteam);
             if(typeof(position) == "undefined" && lastTeamOpened >= 0){
                 $('html, body').animate({
-                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset
+                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
                 console.log("hello");
                 openLastGray(allteam, lastTeamOpened);
@@ -388,7 +388,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
             }else if(allteam[position[0]]["rank"] <= lastTeamOpened){
                 $('html, body').animate({
-                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset
+                    scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
                 console.log("hello");
                 openLastGray(allteam, lastTeamOpened);
@@ -485,6 +485,8 @@ function getProblemItems(Data) {
         var problem_id = problems[i]['@attributes']['id']
         problem[problem_id] = {};
         problem[problem_id]['title'] = problems[i]['@attributes']['title'];
+        problem[problem_id]['head'] = problem[problem_id]['title'].charAt(0);
+        // problem[problem_id]['head'].substring(0, 1);
         problem[problem_id]['bestSolutionTime'] = problems[i]['@attributes']['bestSolutionTime'];
     }
     return problem;
@@ -544,7 +546,7 @@ function addToOpen(Data_before, Data_after, problemInfo){
         //Find Index of Team with same ID
         var afterTeamId = getTeamIndexByID(Data_after, Data_before[i]["teamId"]);
         for(var j = 0; j < numberOfProblem; j ++) {
-            if(Data_before[i]["problemSummaryInfo"][j]["attempts"] < Data_after[afterTeamId]["problemSummaryInfo"][j]["attempts"]){
+            if(Data_before[i]["problemSummaryInfo"][j]["attempts"] < Data_after[afterTeamId]["problemSummaryInfo"][j]["attempts"] || Data_before[i]["problemSummaryInfo"][j]["isSolved"] !== Data_after[afterTeamId]["problemSummaryInfo"][j]["isSolved"]){
                 //Something need to be opened in the future
                 Data_before[i]["problemSummaryInfo"][j]["isOpened"] = false;
                 Data_before[i]["problemSummaryInfo"][j]["problemStylingClass"] = "toopen";

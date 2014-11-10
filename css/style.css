@@ -33,29 +33,38 @@ table{
 
 	font-family: supermarket;
 	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
-   	font-weight: 300;
+   	font-weight: 200;
 	color:white;
-	font-weight: bold;
-	margin-left: -95px;
+	/*font-weight: bold;*/
+	/*margin-left: -95px;*/
 	text-align: center;
+	/*left: -55px;*/
+	font-size: 25px !important;
+	position:absolute;
 	
 }
 thead{
 	position: absolute;
 	top: 12px;
 	z-index: 10000;
-	min-height: 50px;
-	max-height: 50px;
+	min-height: 60px;
+	max-height: 60px;
+
 
 }
 .table > thead > tr > td {
 	border-bottom: 10px solid rgba(179, 185, 189,1.0) ;
+	text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 
 }
 td{
 
-	height: 70px;
-	font-size: 18px;
+	height: 60px;
+	/*font-size: 18px;*/
 	color: black;
 	background-color: rgba(236, 240, 241,1.0);
 	border-bottom: 10px solid rgba(189, 195, 199,1.0);
@@ -67,8 +76,8 @@ td{
 tr{
 	position: absolute; /*Sorry Change back to Absolute*/
 	
-	min-height: 70px;
-	max-height: 70px;
+	min-height: 60px;
+	max-height: 60px;
 	transition: all 1.5s ease;
 }
 .rankcell {
@@ -81,9 +90,9 @@ tr{
 	
 }
 .namecell {
-	font-size: 18px;
-	min-width: 150px;
-	max-width: 150px;
+	/*font-size: 18px;*/
+	min-width: 220px;
+	max-width: 220px;
 	text-overflow: ellipsis;
 
   /* Required for text-overflow to do anything */
@@ -113,8 +122,8 @@ tr{
 }
 .problemcell {
 	
-	max-width: 105px;
-	min-width: 105px;
+	max-width: 50px;
+	min-width: 50px;
 	background-color: rgba(226, 230, 231,1.0);
 	border-bottom: 10px solid rgba(179, 185, 189,1.0);
 	border-left: 1px solid rgba(179, 185, 189,1.0);
