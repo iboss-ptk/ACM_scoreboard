@@ -19,7 +19,7 @@ app.directive('shortcut', function() {
 
 controllers.scoreboardCtrl = function ($scope) {
     // ================== Set Team height here ======================
-    var teamHeight = 60;
+    var teamHeight = 120;
     $scope.teamHeight = teamHeight;
     //===============================================================
     $scope.headerOffset = 12;

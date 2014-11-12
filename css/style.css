@@ -33,13 +33,13 @@ table{
 
 	font-family: supermarket;
 	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
-   	font-weight: 200;
+   	font-weight: 100;
 	color:white;
 	/*font-weight: bold;*/
 	/*margin-left: -95px;*/
-	text-align: center;
-	/*left: -55px;*/
-	font-size: 25px !important;
+	text-align: center !important;
+	left: -30px;
+	font-size: 42px !important;
 	position:absolute;
 	
 }
@@ -47,15 +47,15 @@ thead{
 	position: absolute;
 	top: 12px;
 	z-index: 10000;
-	min-height: 60px;
-	max-height: 60px;
+	min-height: 120px;
+	max-height: 120px;
 
 
 }
 .table > thead > tr > td {
-	border-bottom: 10px solid rgba(179, 185, 189,1.0) ;
-	text-overflow: ellipsis;
-
+	border-bottom: 20px solid rgba(179, 185, 189,1.0) ;
+	/*text-overflow: ellipsis;*/
+/*text-align: center;*/
   /* Required for text-overflow to do anything */
   white-space: nowrap;
   overflow: hidden;
@@ -63,13 +63,13 @@ thead{
 }
 td{
 
-	height: 60px;
+	height: 120px;
 	/*font-size: 18px;*/
 	color: black;
 	background-color: rgba(236, 240, 241,1.0);
-	border-bottom: 10px solid rgba(189, 195, 199,1.0);
-	border-left: 1px solid rgba(189, 195, 199,1.0);
-	border-right: 1px solid rgba(189, 195, 199,1.0);
+	border-bottom: 20px solid rgba(189, 195, 199,1.0);
+	border-left: 2px solid rgba(189, 195, 199,1.0);
+	border-right: 2px solid rgba(189, 195, 199,1.0);
 
 
 }
@@ -81,18 +81,18 @@ tr{
 	transition: all 1.5s ease;
 }
 .rankcell {
-	min-width: 40px;
-	max-width: 40px;
+	min-width: 60px;
+	max-width: 60px;
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 10px solid rgba(179, 185, 189,1.0);
-	border-left: 1px solid rgba(179, 185, 189,1.0);
-	border-right: 1px solid rgba(179, 185, 189,1.0);
+	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-left: 2px solid rgba(179, 185, 189,1.0);
+	border-right: 2px solid rgba(179, 185, 189,1.0);
 	
 }
 .namecell {
 	/*font-size: 18px;*/
-	min-width: 220px;
-	max-width: 220px;
+	min-width: 400px;
+	max-width: 400px;
 	text-overflow: ellipsis;
 
   /* Required for text-overflow to do anything */
@@ -101,34 +101,34 @@ tr{
 }
 .pointcell {
 	
-	min-width: 90px;
-	max-width: 90px;
+	min-width: 160px;
+	max-width: 160px;
 
 }
 .subpointcell {
 	
-	min-width: 60px;
-	max-width: 60px;
+	min-width: 90px;
+	max-width: 90px;
 }
 .solvedcell {
 	
-	min-width: 30px;
-	max-width: 30px;
+	min-width: 70px;
+	max-width: 70px;
 
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 10px solid rgba(179, 185, 189,1.0);
-	border-left: 1px solid rgba(179, 185, 189,1.0);
-	border-right: 1px solid rgba(179, 185, 189,1.0);
+	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-left: 2px solid rgba(179, 185, 189,1.0);
+	border-right: 2px solid rgba(179, 185, 189,1.0);
 }
 .problemcell {
 	
-	max-width: 50px;
-	min-width: 50px;
+	max-width: 35px;
+	min-width: 35px;
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 10px solid rgba(179, 185, 189,1.0);
-	border-left: 1px solid rgba(179, 185, 189,1.0);
-	border-right: 1px solid rgba(179, 185, 189,1.0);
-
+	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-left: 2px solid rgba(179, 185, 189,1.0);
+	border-right: 2px solid rgba(179, 185, 189,1.0);
+	text-align: center;
 }
 .sorted {
 	background-color: gray;
@@ -138,17 +138,17 @@ tr{
 
 .attempted{
 	/*background-color: #f26a6a;*/
-	height: 55px;
+	height: 110px;
 	background-color: rgba(231, 76, 60,1.0);
-	border-bottom: 10px solid rgba(192, 57, 43,1.0);
-	border-right: 1px solid rgba(192, 57, 43,1.0);
-	border-left: 1px solid rgba(192, 57, 43,1.0);
+	border-bottom: 20px solid rgba(192, 57, 43,1.0);
+	border-right: 2px solid rgba(192, 57, 43,1.0);
+	border-left: 2px solid rgba(192, 57, 43,1.0);
 	color :white;
 }
 
 .attemptedanim {
 	/*background-color: #C6FFA1;*/
-	height: 55px;
+	height: 110px;
 
 	-webkit-animation: gored 1s forwards; /* Safari 4+ */
        -moz-animation:    gored 1s forwards; /* Fx 5+ */
@@ -158,28 +158,28 @@ tr{
 }
 
 .solved {
-	height: 55px;
+	height: 110px;
 
 	color :white;
 	background-color: rgba(46, 204, 113,1.0);
-	border-bottom: 10px solid rgba(39, 174, 96,1.0);
-	border-right: 1px solid rgba(39, 174, 96,1.0);
-	border-left: 1px solid rgba(39, 174, 96,1.0);
+	border-bottom: 20px solid rgba(39, 174, 96,1.0);
+	border-right: 2px solid rgba(39, 174, 96,1.0);
+	border-left: 2px solid rgba(39, 174, 96,1.0);
 }
 
 .solvedfirst {
-	height: 55px;
+	height: 110px;
 
 
 	background-color: #FFFE6B;
-	border-bottom: 10px solid #E3E21B;
-	border-right: 1px solid #E3E21B;
-	border-left: 1px solid #E3E21B;
+	border-bottom: 20px solid #E3E21B;
+	border-right: 2px solid #E3E21B;
+	border-left: 2px solid #E3E21B;
 	color:#f96f00;
 }
 .solvedanim {
 	/*background-color: #C6FFA1;*/
-	height: 55px;
+	height: 110px;
 
 	-webkit-animation: gogreen 1s forwards; /* Safari 4+ */
        -moz-animation:    gogreen 1s forwards; /* Fx 5+ */
@@ -190,7 +190,7 @@ tr{
 
 .solvedfirstanim{
 	/*background-color: #C6FFA1;*/
-	height: 55px;
+	height: 110px;
 
 	-webkit-animation: gogreen 1s forwards; /* Safari 4+ */
        -moz-animation:    gogreen 1s forwards; /* Fx 5+ */
@@ -201,33 +201,33 @@ tr{
 @-webkit-keyframes gogreen {
   0%   { 
   	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
+	border-bottom: 20px solid #00b8d4;
+	border-right: 2px solid #00b8d4;
+	border-left: 2px solid #00b8d4;
 	color :black;
 }
   100% { 
 	color :white;
 	background-color: rgba(46, 204, 113,1.0);
-	border-bottom: 10px solid rgba(39, 174, 96,1.0);
-	border-right: 1px solid rgba(39, 174, 96,1.0);
-	border-left: 1px solid rgba(39, 174, 96,1.0);
+	border-bottom: 20px solid rgba(39, 174, 96,1.0);
+	border-right: 2px solid rgba(39, 174, 96,1.0);
+	border-left: 2px solid rgba(39, 174, 96,1.0);
   }
 }
 
 @-webkit-keyframes gored {
   0%   { 
   	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
+	border-bottom: 20px solid #00b8d4;
+	border-right: 2px solid #00b8d4;
+	border-left: 2px solid #00b8d4;
 	color :black;
 }
   100% { 
 	background-color: rgba(231, 76, 60,1.0);
-	border-bottom: 10px solid rgba(192, 57, 43,1.0);
-	border-right: 1px solid rgba(192, 57, 43,1.0);
-	border-left: 1px solid rgba(192, 57, 43,1.0);
+	border-bottom: 20px solid rgba(192, 57, 43,1.0);
+	border-right: 2px solid rgba(192, 57, 43,1.0);
+	border-left: 2px solid rgba(192, 57, 43,1.0);
 	color :white;
   }
 }
@@ -235,16 +235,16 @@ tr{
 @-webkit-keyframes gobest {
   0%   { 
   	background-color: #FFFE6B;
-	border-bottom: 10px solid #E3E21B;
-	border-right: 1px solid #E3E21B;
-	border-left: 1px solid #E3E21B;
+	border-bottom: 20px solid #E3E21B;
+	border-right: 2px solid #E3E21B;
+	border-left: 2px solid #E3E21B;
 	color:#f96f00; 
 }
   100% { 
 	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
+	border-bottom: 20px solid #00b8d4;
+	border-right: 2px solid #00b8d4;
+	border-left: 2px solid #00b8d4;
 	color :black;
   }
 }
@@ -265,26 +265,27 @@ tr{
 }
 .toopen {
 	/*background-color: #f0f06c;*/
-	height: 55px;
+	height: 110px;
 
 	
 	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
+	border-bottom: 20px solid #00b8d4;
+	border-right: 2px solid #00b8d4;
+	border-left: 2px solid #00b8d4;
 	color :black;
 }
 
 .toopen:hover {
 	background-color: #00e5ff;
-	border-bottom: 10px solid #00b8d4;
-	border-right: 1px solid #00b8d4;
-	border-left: 1px solid #00b8d4;
+	border-bottom: 20px solid #00b8d4;
+	border-right: 2px solid #00b8d4;
+	border-left: 2px solid #00b8d4;
 	color :black;
 	cursor: pointer;
 }
 
 .container{
+	/*width: 200%;*/
 }
 
 .shadow {
