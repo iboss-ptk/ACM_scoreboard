@@ -43,17 +43,22 @@ table{
 	position:absolute;
 	
 }
+
+tr {
+	-webkit-transform:translateZ(0);
+}
+
+
 thead{
-	position: absolute;
-	top: 12px;
+	/*position: absolute;*/
+	/*top: 12px;*/
+	left: 88px;
 	z-index: 10000;
 	min-height: 120px;
 	max-height: 120px;
-
-
 }
 .table > thead > tr > td {
-	border-bottom: 20px solid rgba(179, 185, 189,1.0) ;
+	border-bottom: 12px solid rgba(179, 185, 189,1.0) ;
 	/*text-overflow: ellipsis;*/
 /*text-align: center;*/
   /* Required for text-overflow to do anything */
@@ -67,7 +72,7 @@ td{
 	/*font-size: 18px;*/
 	color: black;
 	background-color: rgba(236, 240, 241,1.0);
-	border-bottom: 20px solid rgba(189, 195, 199,1.0);
+	border-bottom: 12px solid rgba(189, 195, 199,1.0);
 	border-left: 2px solid rgba(189, 195, 199,1.0);
 	border-right: 2px solid rgba(189, 195, 199,1.0);
 
@@ -76,15 +81,15 @@ td{
 tr{
 	position: absolute; /*Sorry Change back to Absolute*/
 	
-	min-height: 60px;
-	max-height: 60px;
+	min-height: 120px;
+	max-height: 120px;
 	transition: all 1.5s ease;
 }
 .rankcell {
 	min-width: 60px;
 	max-width: 60px;
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-bottom: 12px solid rgba(179, 185, 189,1.0);
 	border-left: 2px solid rgba(179, 185, 189,1.0);
 	border-right: 2px solid rgba(179, 185, 189,1.0);
 	
@@ -94,7 +99,7 @@ tr{
 	min-width: 400px;
 	max-width: 400px;
 	text-overflow: ellipsis;
-
+	background-color: white;
   /* Required for text-overflow to do anything */
   white-space: nowrap;
   overflow: hidden;
@@ -116,7 +121,7 @@ tr{
 	max-width: 70px;
 
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-bottom: 12px solid rgba(179, 185, 189,1.0);
 	border-left: 2px solid rgba(179, 185, 189,1.0);
 	border-right: 2px solid rgba(179, 185, 189,1.0);
 }
@@ -125,10 +130,11 @@ tr{
 	max-width: 35px;
 	min-width: 35px;
 	background-color: rgba(226, 230, 231,1.0);
-	border-bottom: 20px solid rgba(179, 185, 189,1.0);
+	border-bottom: 12px solid rgba(179, 185, 189,1.0);
 	border-left: 2px solid rgba(179, 185, 189,1.0);
 	border-right: 2px solid rgba(179, 185, 189,1.0);
 	text-align: center;
+	padding: 0px !important;
 }
 .sorted {
 	background-color: gray;
@@ -140,7 +146,7 @@ tr{
 	/*background-color: #f26a6a;*/
 	height: 110px;
 	background-color: rgba(231, 76, 60,1.0);
-	border-bottom: 20px solid rgba(192, 57, 43,1.0);
+	border-bottom: 12px solid rgba(192, 57, 43,1.0);
 	border-right: 2px solid rgba(192, 57, 43,1.0);
 	border-left: 2px solid rgba(192, 57, 43,1.0);
 	color :white;
@@ -162,7 +168,7 @@ tr{
 
 	color :white;
 	background-color: rgba(46, 204, 113,1.0);
-	border-bottom: 20px solid rgba(39, 174, 96,1.0);
+	border-bottom: 12px solid rgba(39, 174, 96,1.0);
 	border-right: 2px solid rgba(39, 174, 96,1.0);
 	border-left: 2px solid rgba(39, 174, 96,1.0);
 }
@@ -172,7 +178,7 @@ tr{
 
 
 	background-color: #FFFE6B;
-	border-bottom: 20px solid #E3E21B;
+	border-bottom: 12px solid #E3E21B;
 	border-right: 2px solid #E3E21B;
 	border-left: 2px solid #E3E21B;
 	color:#f96f00;
@@ -201,7 +207,7 @@ tr{
 @-webkit-keyframes gogreen {
   0%   { 
   	background-color: #00e5ff;
-	border-bottom: 20px solid #00b8d4;
+	border-bottom: 12px solid #00b8d4;
 	border-right: 2px solid #00b8d4;
 	border-left: 2px solid #00b8d4;
 	color :black;
@@ -209,7 +215,7 @@ tr{
   100% { 
 	color :white;
 	background-color: rgba(46, 204, 113,1.0);
-	border-bottom: 20px solid rgba(39, 174, 96,1.0);
+	border-bottom: 12px solid rgba(39, 174, 96,1.0);
 	border-right: 2px solid rgba(39, 174, 96,1.0);
 	border-left: 2px solid rgba(39, 174, 96,1.0);
   }
@@ -218,14 +224,14 @@ tr{
 @-webkit-keyframes gored {
   0%   { 
   	background-color: #00e5ff;
-	border-bottom: 20px solid #00b8d4;
+	border-bottom: 12px solid #00b8d4;
 	border-right: 2px solid #00b8d4;
 	border-left: 2px solid #00b8d4;
 	color :black;
 }
   100% { 
 	background-color: rgba(231, 76, 60,1.0);
-	border-bottom: 20px solid rgba(192, 57, 43,1.0);
+	border-bottom: 12px solid rgba(192, 57, 43,1.0);
 	border-right: 2px solid rgba(192, 57, 43,1.0);
 	border-left: 2px solid rgba(192, 57, 43,1.0);
 	color :white;
@@ -235,14 +241,14 @@ tr{
 @-webkit-keyframes gobest {
   0%   { 
   	background-color: #FFFE6B;
-	border-bottom: 20px solid #E3E21B;
+	border-bottom: 12px solid #E3E21B;
 	border-right: 2px solid #E3E21B;
 	border-left: 2px solid #E3E21B;
 	color:#f96f00; 
 }
   100% { 
 	background-color: #00e5ff;
-	border-bottom: 20px solid #00b8d4;
+	border-bottom: 12px solid #00b8d4;
 	border-right: 2px solid #00b8d4;
 	border-left: 2px solid #00b8d4;
 	color :black;
@@ -269,7 +275,7 @@ tr{
 
 	
 	background-color: #00e5ff;
-	border-bottom: 20px solid #00b8d4;
+	border-bottom: 12px solid #00b8d4;
 	border-right: 2px solid #00b8d4;
 	border-left: 2px solid #00b8d4;
 	color :black;
@@ -277,7 +283,7 @@ tr{
 
 .toopen:hover {
 	background-color: #00e5ff;
-	border-bottom: 20px solid #00b8d4;
+	border-bottom: 12px solid #00b8d4;
 	border-right: 2px solid #00b8d4;
 	border-left: 2px solid #00b8d4;
 	color :black;
@@ -308,4 +314,35 @@ tr{
        -moz-animation:    gohighlight 2s forwards; /* Fx 5+ */
          -o-animation:      gohighlight 2s forwards; /* Opera 12+ */
             animation:         gohighlight 2s forwards; /* IE 10+, Fx 29+ */
+}
+
+.fullShow{
+	display: none;
+	background-image: url('../img/bg.jpg');
+	width: 1500px;
+	height: 1500px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+	font-family: 'supermarket';
+	font-size: 60px;
+	text-align: center;
+}
+
+.award {
+	font-size: 1.2em;
+}
+
+.teamNameShow {
+	font-size: 2em;
+}
+
+.uniShow {
+	font-size: 0.8em;
+}
+
+
+.teamNameShow {
+	
 }

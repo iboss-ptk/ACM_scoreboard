@@ -24,6 +24,35 @@ controllers.scoreboardCtrl = function ($scope) {
     //===============================================================
     $scope.headerOffset = 12;
     var loadedLastTeam = 0;
+    var disableScroll = false;
+
+    //=================== Set Award Screen ==========================
+    var enableAward = true;
+    var isAwardOpen = false;
+    var listAward = {};
+    listAward[1] = "First Place";
+    listAward[2] = "Second Place";
+    listAward[3] = "Third Place";
+    listAward[4] = "4 Place";
+    listAward[5] = "5 Place";
+    listAward[6] = "6 Place";
+    listAward[7] = "7 Place";
+    listAward[8] = "8 Place";
+    listAward[9] = "9 Place";
+    listAward[10] = "Tenth Place";
+    listAward[16] = "16th Place";
+    listAward[12] = "12th Place";
+    listAward[18] = "18th Place";
+
+    //=================== Multiple solve mode ========================
+    var enableMultipleSolve = true;
+    var currentMultipleSolve = 0;
+    var listOpen =[];
+    listOpen[0] = {};   
+    listOpen[0][5] = 10;
+    listOpen[0][4] = 4;
+    listOpen[0][2] = 3; 
+
 
     //score data must be replaced later
     xmlDoc=loadXMLDoc("results-recent-before.xml");
@@ -64,17 +93,79 @@ controllers.scoreboardCtrl = function ($scope) {
 
     $(window).scroll(function(event) {
         //Scroll Window to team original position
-        var tabletop = $("table").offset().top;
+        var tabletop = $(".maintable").offset().top;
         var pagetop = $(window).scrollTop();
         var headerOffset = 0;
+        $("thead").css("left", $(".maintable").offset().left);
+        // console.log("hello");
         if(tabletop + $scope.headerOffset < pagetop) {
-            $("thead").css('top', pagetop - tabletop);
+            // $("thead").css('top', 0);
+            $("thead").css('position', 'fixed');
+            $("thead").css('top', 0);
             $("thead > tr").addClass('headershadow');
         } else {
-            $("thead").css('top', $scope.headerOffset);
+            $("thead").css('position', 'absolute');
+            $("thead").css('top', tabletop + $scope.headerOffset - pagetop);
             $("thead > tr").removeClass('headershadow');
         }
     });
+
+    function showAward(teamId){
+        if(!enableAward) return;
+        var tempRank = allteam[teamId]["rank"];
+        $scope.award = listAward[tempRank];
+        $scope.teamNameShow = allteam[teamId]["teamName"];
+        $scope.uniShow = "Chulalongkorn University";
+        var width = $(window).width();
+        $(".fullShow").css('width', width);
+        $(".fullShow").fadeIn('slow', function() {
+            isAwardOpen = true;
+        });
+    }
+
+    $scope.openWholeProblem = function(problem){
+        var times = allteam.length - 1;
+        console.log(times);
+        for(i = 0; i <= times; i++){
+            console.log(i);
+            if(allteam[i]["problemSummaryInfo"][problem]["isOpened"] == true) continue;
+                    // Find Team index in After Score
+                    afterTeamIndex = getTeamIndexByID(allteam_after, allteam[i]["teamId"]);
+                    var problemItem = allteam_after[afterTeamIndex]["problemSummaryInfo"][problem];
+                    var isSolved = problemItem["isSolved"];
+                    var attempts = parseInt(problemItem["attempts"]);
+                    var solutionTime = parseInt(problemItem["solutionTime"]);
+
+                    //Check is Solved or not
+                    if(isSolved == "true") {
+                        allteam[i]["solved"] = parseInt(allteam[i]["solved"]) + 1 + ""; //Add number of solved items
+                        allteam[i]["points"] = parseInt(allteam[i]["points"]) + solutionTime + (20*(attempts - 1)) +""; //Update team's points
+                        allteam[i]["totalAttempts"] = parseInt(allteam[i]["totalAttempts"]) - parseInt(allteam[i]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[i]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        // console.log($scope.header[parseInt(problem) + 1]);
+                        if($scope.header[parseInt(problem) + 1]['bestSolutionTime'] == solutionTime)
+                            allteam[i]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedfirstanim"; // Add Best Solve Style
+                        else 
+                            allteam[i]["problemSummaryInfo"][problem]["problemStylingClass"] = "solvedanim"; // Add Styling Class
+
+                        allteam[i]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                        
+                    } else {
+                        allteam[i]["totalAttempts"] = parseInt(allteam[i]["totalAttempts"]) - parseInt(allteam[i]["problemSummaryInfo"][problem]["attempts"]) + attempts + ""; //Update team's totalAttempts
+                        allteam[i]["problemSummaryInfo"][problem] = problemItem; //Update problemItem;
+                        allteam[i]["problemSummaryInfo"][problem]["problemStylingClass"] = "attemptedanim";   // Add Styling Class    
+                        allteam[i]["problemSummaryInfo"][problem]["isOpened"] = true; //Set that this Problem is already opened
+                                 
+                    }
+
+
+                   // Update allteam to SCOPE
+                    $scope.teams = allteam.slice();
+
+                    allteam = rerank(allteam);
+
+        }
+    }
 
     
     //Resuem stages function
@@ -87,6 +178,9 @@ controllers.scoreboardCtrl = function ($scope) {
             while(position[0] >= num){
                 if(allteam[position[0]]["rank"] <= lastTeamOpened){
                     openLastGray(allteam, lastTeamOpened);
+                    // console.log(listAward[allteam[position[0]]["rank"]]);
+                    // console.log(allteam[position[0]]["rank"]);
+                    
                     lastTeamOpened--;
                     finish = 1;
                     continue;
@@ -224,7 +318,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
     var finish = 1;
     //Attach open function to Scope
-    $scope.opentag = function(position){       
+    $scope.opentag = function(position){
             // -- position[0] is Team Index in allteam variable --
             // -- position[1] is ProblemId  that has to be opened --
             //Check is this already opene or not. If it already opend return;
@@ -241,7 +335,8 @@ controllers.scoreboardCtrl = function ($scope) {
             var winhigh = $(window).height();
             var pagetop = $(window).scrollTop();
             var targettop = $("#" + (parseInt(position[0]) + 1)).offset().top;
-            //if(Math.abs(pagetop - targettop) > winhigh - 200) {
+            //if(Math.absolutes(pagetop - targettop) > winhigh - 200) {
+            if(!disableScroll)
                 $('html, body').animate({
                     scrollTop: allteam[position[0]]["rank"]*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
@@ -371,6 +466,29 @@ controllers.scoreboardCtrl = function ($scope) {
         if(e.which == 13) {
             if(finish == 0) return;
             else finish = 0;
+            if(enableMultipleSolve && currentMultipleSolve < listOpen.length) {
+                    // if(currentMultipleSolve < listOpen.length){
+                    // for(i = 0; i < listOpen[currentMultipleSolve].length; i++){
+                $.each(listOpen[currentMultipleSolve], function(index, val) {
+                    $scope.opentag([index - 1, val -1 ]);
+                    disableScroll = true;
+                });
+                disableScroll = false;
+                currentMultipleSolve++;
+                    // }
+                // }
+                finish = 1;
+                return;
+            }
+
+            if(isAwardOpen){
+                $(".fullShow").fadeOut('slow', function() {
+                    isAwardOpen = false;
+                    finish = 1;
+                });
+                return;
+            }
+
             var position = findLastToOpen(allteam);
             if(typeof(position) == "undefined" && lastTeamOpened >= 0){
                 $('html, body').animate({
@@ -390,20 +508,48 @@ controllers.scoreboardCtrl = function ($scope) {
                 $('html, body').animate({
                     scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
-                console.log("hello");
+                // console.log("hello");
                 openLastGray(allteam, lastTeamOpened);
                 lastTeamOpened--;
                 finish = 1;
                 // console.log(lastTeamOpened);
             } else {
                 //Call opentag function
-                console.log(allteam[position[0]]["rank"]);
+                // console.log(allteam[position[0]]["rank"]);
+
                 $scope.opentag(position); 
             }
             $scope.$apply();
             return;
         }
     });
+    
+    function openLastGray(Data, position){
+    // Sort by Rank first
+        // console.log(position);
+        
+        Data.sort(function(a, b){
+            aRank = parseInt(a["rank"]);
+            bRank = parseInt(b["rank"]);
+            return ((aRank < bRank) ? -1 : ((aRank > bRank) ? 1 : 0));
+        });
+
+        if(typeof(listAward[Data[position]["rank"]]) !== "undefined"){
+            // console.log(listAward[Data[position["rank"]]] + "award");
+            console.log(Data[position]["rank"] + " Rank");
+            showAward(position);
+        }
+
+        if(Data[position]["stylingClass"] == "")
+            Data[position]["stylingClass"] += " shadowbox";
+        
+        Data.sort(function(a,b) {
+            aIndex = parseInt(a["index"]);
+            bIndex = parseInt(b["index"]);
+            return ((aIndex < bIndex) ? -1 : ((aIndex > bIndex) ? 1 : 0));
+        });
+        return undefined;
+    }
 }
 
 
@@ -421,24 +567,7 @@ function loadXMLDoc(dname){
     return xhttp.responseXML;
 }
 
-function openLastGray(Data, position){
-    // Sort by Rank first
-    Data.sort(function(a, b){
-        aRank = parseInt(a["rank"]);
-        bRank = parseInt(b["rank"]);
-        return ((aRank < bRank) ? -1 : ((aRank > bRank) ? 1 : 0));
-    });
 
-    if(Data[position]["stylingClass"] == "")
-        Data[position]["stylingClass"] += " shadowbox";
-    
-    Data.sort(function(a,b) {
-        aIndex = parseInt(a["index"]);
-        bIndex = parseInt(b["index"]);
-        return ((aIndex < bIndex) ? -1 : ((aIndex > bIndex) ? 1 : 0));
-    });
-    return undefined;
-}
 
 //Function for Converting XML to JSON
 xmlToJson = function(xml) {
