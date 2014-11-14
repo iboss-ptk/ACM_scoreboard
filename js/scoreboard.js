@@ -52,6 +52,11 @@ controllers.scoreboardCtrl = function ($scope) {
     listOpen[0][5] = 10;
     listOpen[0][4] = 4;
     listOpen[0][2] = 3; 
+    //---------------------
+    listOpen[1] = {};   
+    listOpen[1][7] = 2;
+    listOpen[1][9] = 2;
+    listOpen[1][11] = 5; 
 
 
     //score data must be replaced later
@@ -115,7 +120,8 @@ controllers.scoreboardCtrl = function ($scope) {
         var tempRank = allteam[teamId]["rank"];
         $scope.award = listAward[tempRank];
         $scope.teamNameShow = allteam[teamId]["teamName"];
-        $scope.uniShow = "Chulalongkorn University";
+        $scope.uniShow = allteam[teamId]["universityName"];
+        $scope.countryShow = allteam[teamId]["country"];
         var width = $(window).width();
         $(".fullShow").css('width', width);
         $(".fullShow").fadeIn('slow', function() {
@@ -174,8 +180,9 @@ controllers.scoreboardCtrl = function ($scope) {
         if(num != 0 && loadedLastTeam == 0){
             loadedLastTeam = 1;
             var position = findLastToOpen(allteam);
-            
+            console.log(position);
             while(position[0] >= num){
+                console.log(position);
                 if(allteam[position[0]]["rank"] <= lastTeamOpened){
                     openLastGray(allteam, lastTeamOpened);
                     // console.log(listAward[allteam[position[0]]["rank"]]);
@@ -469,9 +476,17 @@ controllers.scoreboardCtrl = function ($scope) {
             if(enableMultipleSolve && currentMultipleSolve < listOpen.length) {
                     // if(currentMultipleSolve < listOpen.length){
                     // for(i = 0; i < listOpen[currentMultipleSolve].length; i++){
+                var min = 10000;
                 $.each(listOpen[currentMultipleSolve], function(index, val) {
-                    $scope.opentag([index - 1, val -1 ]);
+                    if(min > parseInt(index)) min = parseInt(index);
+                    // console.log("index" + typeof(index));
                     disableScroll = true;
+                    $scope.opentag([index - 1, val -1 ]);
+                });
+                console.log("min" + min);
+                $('html, body').animate({
+                    scrollTop: (min+1)*(teamHeight + 5) 
+                }, 300, function(){
                 });
                 disableScroll = false;
                 currentMultipleSolve++;
@@ -494,7 +509,7 @@ controllers.scoreboardCtrl = function ($scope) {
                 $('html, body').animate({
                     scrollTop: (lastTeamOpened + 1)*(teamHeight + 5) + $scope.headerOffset - 300
                 }, 300);
-                console.log("hello");
+                // console.log("hello");
                 openLastGray(allteam, lastTeamOpened);
                 lastTeamOpened--;
                 finish = 1;
@@ -536,7 +551,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
         if(typeof(listAward[Data[position]["rank"]]) !== "undefined"){
             // console.log(listAward[Data[position["rank"]]] + "award");
-            console.log(Data[position]["rank"] + " Rank");
+            // console.log(Data[position]["rank"] + " Rank");
             showAward(position);
         }
 
@@ -801,6 +816,11 @@ function getAllTeam(Data) {
     //PARSE THE RANK NUMBER TO INT ( OPTIMIZED )
     for(var i = 1; i <= numberOfTeam; i++){
         teams[i] = getTeamByRank(Data, i);
+        // console.log(teams[i]);
+        var tempName = teams[i]["teamName"];
+        teams[i]["country"] = tempName.substring(1, 4);
+        teams[i]["teamName"] = tempName;//tempName.substr(6, tempName.indexOf(" - ") - 6);
+        teams[i]["universityName"] = tempName.substr(tempName.indexOf(" - ") + 3);
         teams[i].rank = parseInt(teams[i].rank);
     }
  
