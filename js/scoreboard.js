@@ -19,7 +19,7 @@ app.directive('shortcut', function() {
 
 controllers.scoreboardCtrl = function ($scope) {
     // ================== Set Team height here ======================
-    var teamHeight = 120;
+    var teamHeight = 90;
     $scope.teamHeight = teamHeight;
     //===============================================================
     $scope.headerOffset = 12;
@@ -30,22 +30,24 @@ controllers.scoreboardCtrl = function ($scope) {
     var enableAward = true;
     var isAwardOpen = false;
     var listAward = {};
-    listAward[1] = "First Place";
-    listAward[2] = "Second Place";
-    listAward[3] = "Third Place";
-    listAward[4] = "4 Place";
-    listAward[5] = "5 Place";
-    listAward[6] = "6 Place";
-    listAward[7] = "7 Place";
-    listAward[8] = "8 Place";
-    listAward[9] = "9 Place";
-    listAward[10] = "Tenth Place";
-    listAward[16] = "16th Place";
-    listAward[12] = "12th Place";
-    listAward[18] = "18th Place";
+    listAward[1] = "The Winner";
+    listAward[2] = "The 1st Runner up";
+    listAward[3] = "The 2nd Runner up";
+    listAward[4] = "The honorable mention";
+    listAward[5] = "The honorable mention";
+    listAward[6] = "The honorable mention";
+    listAward[7] = "The honorable mention";
+    // listAward[17] = "Test Award Page";
+    var currentRank = 100;
+    // listAward[8] = "8 Place";
+    // listAward[9] = "9 Place";
+    // listAward[10] = "Tenth Place";
+    // listAward[16] = "16th Place";
+    // listAward[12] = "12th Place";
+    // listAward[18] = "18th Place";
 
     //=================== Multiple solve mode ========================
-    var enableMultipleSolve = true;
+    var enableMultipleSolve = false;
     var currentMultipleSolve = 0;
     var listOpen =[];
     listOpen[0] = {};   
@@ -60,7 +62,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
 
     //score data must be replaced later
-    xmlDoc=loadXMLDoc("results-recent-before.xml");
+    xmlDoc=loadXMLDoc("asia_1.xml");
     score_before = xmlToJson(xmlDoc);
     $scope.header = getProblemItems(score_before);
     $scope.problems = [];
@@ -78,7 +80,7 @@ controllers.scoreboardCtrl = function ($scope) {
         allteam.push(val);
     });
     // Load Final Score And Reconstruct Teams data
-    xmlDoc=loadXMLDoc("results-recent-after.xml");
+    xmlDoc=loadXMLDoc("asia_2.xml");
     score_after = xmlToJson(xmlDoc);
     allteam_after_temp = getAllTeam(score_after);
     allteam_after = [];
@@ -95,7 +97,9 @@ controllers.scoreboardCtrl = function ($scope) {
 
     // Get number of the problem
     numberOfProblem = getNumOfProblem(score_before);
-
+    $(document).ready(function($) {        
+        $("thead").css("left", $(".maintable").offset().left);
+    });
     $(window).scroll(function(event) {
         //Scroll Window to team original position
         var tabletop = $(".maintable").offset().top;
@@ -118,6 +122,7 @@ controllers.scoreboardCtrl = function ($scope) {
     function showAward(teamId){
         if(!enableAward) return;
         var tempRank = allteam[teamId]["rank"];
+        currentRank = tempRank;
         $scope.award = listAward[tempRank];
         $scope.teamNameShow = allteam[teamId]["teamName"];
         $scope.uniShow = allteam[teamId]["universityName"];
@@ -131,7 +136,7 @@ controllers.scoreboardCtrl = function ($scope) {
 
     $scope.openWholeProblem = function(problem){
         var times = allteam.length - 1;
-        console.log(times);
+        // console.log(times);
         for(i = 0; i <= times; i++){
             console.log(i);
             if(allteam[i]["problemSummaryInfo"][problem]["isOpened"] == true) continue;
@@ -180,9 +185,9 @@ controllers.scoreboardCtrl = function ($scope) {
         if(num != 0 && loadedLastTeam == 0){
             loadedLastTeam = 1;
             var position = findLastToOpen(allteam);
-            console.log(position);
+            // console.log(position);
             while(position[0] >= num){
-                console.log(position);
+                // console.log(position);
                 if(allteam[position[0]]["rank"] <= lastTeamOpened){
                     openLastGray(allteam, lastTeamOpened);
                     // console.log(listAward[allteam[position[0]]["rank"]]);
@@ -495,11 +500,31 @@ controllers.scoreboardCtrl = function ($scope) {
                 finish = 1;
                 return;
             }
+            if(currentRank == 1) {
+                console.log("cur1");
+                $(".fullShow").fadeOut('slow', function(){
+                    $scope.teamNameShow = "Congratulations";
+                    $scope.award = "";
+                    $(".fullShowTop").css('height', 350);
+                    $(".teamNameShow").addClass('text-shadow');
+                    // $scope.teamNameShow = "";
+                    $scope.uniShow = "";
+                    $scope.countryShow = "";
+                    $scope.$apply();
+                });
+                
+                $(".fullShow").fadeIn('slow');
+                return;
+            }
 
-            if(isAwardOpen){
+            if(isAwardOpen && currentRank >= 0){
                 $(".fullShow").fadeOut('slow', function() {
                     isAwardOpen = false;
                     finish = 1;
+                    // console.log(currentRank);
+                    // if(currentRank == 1) {
+                        
+                    // }
                 });
                 return;
             }
@@ -818,8 +843,31 @@ function getAllTeam(Data) {
         teams[i] = getTeamByRank(Data, i);
         // console.log(teams[i]);
         var tempName = teams[i]["teamName"];
-        teams[i]["country"] = tempName.substring(1, 4);
-        teams[i]["teamName"] = tempName;//tempName.substr(6, tempName.indexOf(" - ") - 6);
+        var country = tempName.substring(1, 4);
+        if(country == "THA") 
+            country = "Thailand";
+        else if(country == "SGP")
+            country = "Singapore";
+        else if(country == "IDN")
+            country = "Indonesia";
+        else if(country == "CHN")
+            country = "China";
+        else if(country == "HKG")
+            country = "Hong Kong";
+        else if(country == "KOR")
+            country = "South Korea";
+        else if(country == "TWN")
+            country = "Taiwan";
+        else if(country == "VTN")
+            country = "Vietnam";
+        else if(country == "PHL")
+            country = "Philippines";
+        else if(country == "JPN")
+            country = "Japan";
+
+        teams[i]["country"] = country;
+
+        teams[i]["teamName"] = tempName.substr(6, tempName.indexOf(" - ") - 6);
         teams[i]["universityName"] = tempName.substr(tempName.indexOf(" - ") + 3);
         teams[i].rank = parseInt(teams[i].rank);
     }

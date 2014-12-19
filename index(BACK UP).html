@@ -7,38 +7,26 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
-  <title>ACM Scoreboard</title>
 </head>
 <!-- <body background = "img/bg.png" style="background-attachment:fixed;background-position:center;" ng-keypress="startMove"> -->
-<body style="background-color:rgba(52, 73, 94,1.0);" ng-keypress="startMove" ng-controller="scoreboardCtrl">
-  <table class="table" style="position:fixed; -webkit-transform:translateZ(0); z-index:1000; left:0px;">
-    <thead>
-      <tr>
-        <td class="rankcell" >#</td>
-        <td class="namecell">Team Name</td>
-        <td colspan=2 class="pointcell">Points</td>
-        <td ng-repeat="(key, item) in problems" class="problemcell" title="{{item.title}}" ng-click="openWholeProblem(key)">{{item.head}}</td>
-      </tr>
-    </thead>
-  </table>
-  <div class="fullShow">
-    <div class="fullShowTop" style="height: 250px"></div>
-    <div class="award">{{award}}</div>
-    <div class="teamNameShow">{{teamNameShow}}</div>
-    <div class="uniShow">{{uniShow}}<br>{{countryShow}}</div>
-  </div>
-  <!-- <span class ="logo"><div class = "animated bounceInLeft"><img src = "img/ACMLOGO_CONTEST.png"/> </div><span> -->
-  <div style="height: 50px"></div>
-    <div class="container">
+<body style="background-color:rgba(52, 73, 94,1.0);" ng-keypress="startMove">
+  <span class ="logo"><div class = "animated bounceInLeft"><img src = "img/ACMLOGO_CONTEST.png"/> </div><span>
+    <div class="container" ng-controller="scoreboardCtrl">
       <div class = "animated fadeInDown">
-        <div style="position:absolute; top:0px text-align:right; width: 108.5%">
+        <div style="position:absolute; top: -40px; text-align:right; width: 108.5%">
           <button class="btn btn-primary" ng-click="resumeStages(0)">Resume Stage</button>
           <button class="btn btn-danger" ng-click="clearStage()">Clear Stage</button>
-          <button class="btn btn-warning" ng-click="setStage()">Skip</button>          
+          <button class="btn btn-warning" ng-click="resumeStages(15)">Last 15 teams</button>          
         </div>
-        <div style="height:50px"></div>
-        
-        <table class = "table maintable">
+        <table class = "table">
+          <thead>
+            <tr>
+              <td class="rankcell" >Rank</td>
+              <td class="namecell">Team Name</td>
+              <td colspan=2 class="pointcell">Points</td>
+              <td ng-repeat="item in problems" class="problemcell">{{item.title}}</td>
+            </tr>
+          </thead>
             <tr ng-repeat=" team in teams track by $index" style="top:{{team.rank*(teamHeight + 5) + headerOffset}}px; z-index :{{team.z}}" class="{{team.stylingClass}}" id="{{team.rank}}">
                 <!--<td>{{team.totalAttempts}}</td>-->
                 <td ng-bind="team.showrank" class="rankcell"></td>
@@ -49,9 +37,9 @@
                   <!-- CLASS = problemcell insert index-1 leaw dai  XML SAYS <problemSummaryInfo index="1 to 8" -->
                   <!-- Loop can Run 0 to 7 SO ITEM.INDEX-1 -->
                   <span  ng-show="{{item.attempts!=0}}">{{item.attempts}} 
-                    <!-- <span ng-show="{{item.isSolved}}">
+                    <span ng-show="{{item.isSolved}}">
                       ({{item.solutionTime}}+{{(item.attempts-1) * 20}})
-                    </span> -->
+                    </span>
                   </span>
                 </td>
             </tr>
