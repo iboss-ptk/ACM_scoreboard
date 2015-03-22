@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contestStandings>
+  <standingsHeader currentDate="Fri Nov 14 14:48:56 ICT 2014" generatorId="$Id: DefaultScoringAlgorithm.java 2534 2012-04-18 02:27:12Z boudreat $" groupCount="1" medianProblemsSolved="3" problemCount="3" problemsAttempted="3" siteCount="1" systemName="CSUS Programming Contest System" systemURL="http://pc2.ecs.csus.edu/" systemVersion="9.2.3 20120910 build 2565" title="ACM-ICPC 2014 Asia Bangkok Regional Programming Contest" totalAttempts="393" totalSolved="284">
+    <groupList/>
+    <colorList>
+      <colors id="1" siteNum="1">
+        <problem color="Caramel" id="1"/>
+        <problem color="Dynamite" id="2"/>
+        <problem color="LemonTea" id="3"/>
+      </colors>
+    </colorList>
+    <problem attempts="142" bestSolutionTime="1" id="1" lastSolutionTime="74" numberSolved="95" title="A-Ground Truth"/>
+    <problem attempts="130" bestSolutionTime="4" id="2" lastSolutionTime="95" numberSolved="93" title="B-Hormones"/>
+    <problem attempts="121" bestSolutionTime="3" id="3" lastSolutionTime="90" numberSolved="96" title="C-Decode"/>
+  </standingsHeader>
+  <teamStanding firstSolved="2" index="0" lastSolved="8" points="16" problemsAttempted="3" rank="1" solved="3" teamAlias="[THA] CPCU Happy Night - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="46" teamKey="1TEAM46" teamName="[THA] CPCU Happy Night - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="8" problemId="C-Decode-913109545190031126" solutionTime="8"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="1" lastSolved="8" points="16" problemsAttempted="3" rank="1" solved="3" teamAlias="[THA] CPUCUCP - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="83" teamKey="1TEAM83" teamName="[THA] CPUCUCP - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="8" problemId="C-Decode-913109545190031126" solutionTime="8"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="2" lastSolved="11" points="19" problemsAttempted="3" rank="3" solved="3" teamAlias="[THA] PSU_Demons - Prince of Songkla University (not aliasesd)" teamExternalId="" teamId="103" teamKey="1TEAM103" teamName="[THA] PSU_Demons - Prince of Songkla University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="11" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="3" lastSolved="11" points="19" problemsAttempted="3" rank="3" solved="3" teamAlias="[THA] SE-Xenon - King Mongkut's Institute of Technology Ladkrabang (not aliasesd)" teamExternalId="" teamId="98" teamKey="1TEAM98" teamName="[THA] SE-Xenon - King Mongkut's Institute of Technology Ladkrabang" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="3" problemId="C-Decode-913109545190031126" solutionTime="3"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="4" lastSolved="11" points="20" problemsAttempted="3" rank="5" solved="3" teamAlias="[THA] fb.com/padungkietFC - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="28" teamKey="1TEAM28" teamName="[THA] fb.com/padungkietFC - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="7" problemId="C-Decode-913109545190031126" solutionTime="7"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="5" lastSolved="12" points="20" problemsAttempted="3" rank="6" solved="3" teamAlias="[SIN] m(_ _)m - Nanyang Technological University (not aliasesd)" teamExternalId="" teamId="27" teamKey="1TEAM27" teamName="[SIN] m(_ _)m - Nanyang Technological University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="12" problemId="C-Decode-913109545190031126" solutionTime="12"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="6" lastSolved="13" points="22" problemsAttempted="3" rank="7" solved="3" teamAlias="[THA] MUICT_Reducto - Mahidol University (not aliasesd)" teamExternalId="" teamId="100" teamKey="1TEAM100" teamName="[THA] MUICT_Reducto - Mahidol University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="13" problemId="B-Hormones-4125415719594540759" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="7" problemId="C-Decode-913109545190031126" solutionTime="7"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="7" lastSolved="11" points="23" problemsAttempted="3" rank="8" solved="3" teamAlias="[THA] MU PC Faster - Mahidol University (not aliasesd)" teamExternalId="" teamId="60" teamKey="1TEAM60" teamName="[THA] MU PC Faster - Mahidol University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="8" problemId="B-Hormones-4125415719594540759" solutionTime="8"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="11" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="8" lastSolved="12" points="23" problemsAttempted="3" rank="9" solved="3" teamAlias="[THA] BoongBoong - King Mongkut's Institute of Technology Ladkrabang (not aliasesd)" teamExternalId="" teamId="37" teamKey="1TEAM37" teamName="[THA] BoongBoong - King Mongkut's Institute of Technology Ladkrabang" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="6" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="12" problemId="B-Hormones-4125415719594540759" solutionTime="12"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="5" problemId="C-Decode-913109545190031126" solutionTime="5"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="9" lastSolved="13" points="23" problemsAttempted="3" rank="10" solved="3" teamAlias="[THA] T2 - Kasetsart University, Sriracha Campus (not aliasesd)" teamExternalId="" teamId="88" teamKey="1TEAM88" teamName="[THA] T2 - Kasetsart University, Sriracha Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="13" problemId="B-Hormones-4125415719594540759" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="5" problemId="C-Decode-913109545190031126" solutionTime="5"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="10" lastSolved="14" points="24" problemsAttempted="3" rank="11" solved="3" teamAlias="[PHI] Fuchsia Moth - Ateneo de Manila University (not aliasesd)" teamExternalId="" teamId="17" teamKey="1TEAM17" teamName="[PHI] Fuchsia Moth - Ateneo de Manila University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="7" problemId="B-Hormones-4125415719594540759" solutionTime="7"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="11" lastSolved="15" points="24" problemsAttempted="3" rank="12" solved="3" teamAlias="[THA] CPCU_footLongHamCheese - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="31" teamKey="1TEAM31" teamName="[THA] CPCU_footLongHamCheese - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="12" lastSolved="13" points="26" problemsAttempted="3" rank="13" solved="3" teamAlias="[VIE] HCMUS-YOLO - Ho Chi Minh City University of Science (not aliasesd)" teamExternalId="" teamId="78" teamKey="1TEAM78" teamName="[VIE] HCMUS-YOLO - Ho Chi Minh City University of Science" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="13" problemId="C-Decode-913109545190031126" solutionTime="13"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="13" lastSolved="15" points="26" problemsAttempted="3" rank="14" solved="3" teamAlias="[THA] BUU-PC Whoopy Pie - Burapha University (not aliasesd)" teamExternalId="" teamId="8" teamKey="1TEAM8" teamName="[THA] BUU-PC Whoopy Pie - Burapha University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="7" problemId="A-Ground Truth-2070032656405595352" solutionTime="7"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="4" problemId="B-Hormones-4125415719594540759" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="14" lastSolved="14" points="27" problemsAttempted="3" rank="15" solved="3" teamAlias="[SOU] Underwood - Yonsei University (not aliasesd)" teamExternalId="" teamId="52" teamKey="1TEAM52" teamName="[SOU] Underwood - Yonsei University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="8" problemId="B-Hormones-4125415719594540759" solutionTime="8"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="7" index="15" lastSolved="12" points="28" problemsAttempted="3" rank="16" solved="3" teamAlias="[IND] DELAPAN.3gp - Institut Teknologi Bandung (not aliasesd)" teamExternalId="" teamId="11" teamKey="1TEAM11" teamName="[IND] DELAPAN.3gp - Institut Teknologi Bandung" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="9" problemId="A-Ground Truth-2070032656405595352" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="12" problemId="B-Hormones-4125415719594540759" solutionTime="12"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="7" problemId="C-Decode-913109545190031126" solutionTime="7"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="16" lastSolved="13" points="28" problemsAttempted="3" rank="17" solved="3" teamAlias="[CHI] Sanity’s Eclipse - Shanghai Jiao Tong University (not aliasesd)" teamExternalId="" teamId="97" teamKey="1TEAM97" teamName="[CHI] Sanity’s Eclipse - Shanghai Jiao Tong University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="13" problemId="B-Hormones-4125415719594540759" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="10" problemId="C-Decode-913109545190031126" solutionTime="10"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="17" lastSolved="15" points="28" problemsAttempted="3" rank="18" solved="3" teamAlias="[THA] CPCU_PPP - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="36" teamKey="1TEAM36" teamName="[THA] CPCU_PPP - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="10" problemId="B-Hormones-4125415719594540759" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="18" lastSolved="17" points="29" problemsAttempted="3" rank="19" solved="3" teamAlias="[THA] KMUTNB_Glass_Man - King Mongkut's University of Technology North Bangkok (not aliasesd)" teamExternalId="" teamId="73" teamKey="1TEAM73" teamName="[THA] KMUTNB_Glass_Man - King Mongkut's University of Technology North Bangkok" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="17" problemId="B-Hormones-4125415719594540759" solutionTime="17"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="9" problemId="C-Decode-913109545190031126" solutionTime="9"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="19" lastSolved="15" points="30" problemsAttempted="3" rank="20" solved="3" teamAlias="[THA] CPCU Cute Girn - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="39" teamKey="1TEAM39" teamName="[THA] CPCU Cute Girn - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="20" lastSolved="17" points="30" problemsAttempted="3" rank="21" solved="3" teamAlias="[THA] GCC - Kasetsart University, Sriracha Campus (not aliasesd)" teamExternalId="" teamId="81" teamKey="1TEAM81" teamName="[THA] GCC - Kasetsart University, Sriracha Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="17" problemId="C-Decode-913109545190031126" solutionTime="17"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="21" lastSolved="18" points="30" problemsAttempted="3" rank="22" solved="3" teamAlias="[THA] PSU_ARaiKorDai - Prince of Songkla University (not aliasesd)" teamExternalId="" teamId="59" teamKey="1TEAM59" teamName="[THA] PSU_ARaiKorDai - Prince of Songkla University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="18" problemId="B-Hormones-4125415719594540759" solutionTime="18"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="10" problemId="C-Decode-913109545190031126" solutionTime="10"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="22" lastSolved="16" points="31" problemsAttempted="3" rank="23" solved="3" teamAlias="[CHI] Mayonnaise - Shanghai Jiao Tong University (not aliasesd)" teamExternalId="" teamId="94" teamKey="1TEAM94" teamName="[CHI] Mayonnaise - Shanghai Jiao Tong University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="13" problemId="B-Hormones-4125415719594540759" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="16" problemId="C-Decode-913109545190031126" solutionTime="16"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="23" lastSolved="18" points="31" problemsAttempted="3" rank="24" solved="3" teamAlias="[THA] MAX - Khon Kaen University (not aliasesd)" teamExternalId="" teamId="95" teamKey="1TEAM95" teamName="[THA] MAX - Khon Kaen University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="10" problemId="B-Hormones-4125415719594540759" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="18" problemId="C-Decode-913109545190031126" solutionTime="18"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="24" lastSolved="15" points="32" problemsAttempted="3" rank="25" solved="3" teamAlias="[SIN] AAA - Nanyang Technological University (not aliasesd)" teamExternalId="" teamId="21" teamKey="1TEAM21" teamName="[SIN] AAA - Nanyang Technological University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="6" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="25" lastSolved="15" points="32" problemsAttempted="3" rank="25" solved="3" teamAlias="[THA] CPCU gokim - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="42" teamKey="1TEAM42" teamName="[THA] CPCU gokim - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="12" problemId="C-Decode-913109545190031126" solutionTime="12"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="26" lastSolved="16" points="32" problemsAttempted="3" rank="27" solved="3" teamAlias="[THA] Inori.jung@CSCMU - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="12" teamKey="1TEAM12" teamName="[THA] Inori.jung@CSCMU - Chiang Mai University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="16" problemId="B-Hormones-4125415719594540759" solutionTime="16"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="27" lastSolved="18" points="33" problemsAttempted="3" rank="28" solved="3" teamAlias="[THA] Mini MOE - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="44" teamKey="1TEAM44" teamName="[THA] Mini MOE - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="18" problemId="C-Decode-913109545190031126" solutionTime="18"/>
+  </teamStanding>
+  <teamStanding firstSolved="1" index="28" lastSolved="9" points="34" problemsAttempted="3" rank="29" solved="3" teamAlias="[THA] CU Meow Meow :3 - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="33" teamKey="1TEAM33" teamName="[THA] CU Meow Meow :3 - Chulalongkorn University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="1" problemId="A-Ground Truth-2070032656405595352" solutionTime="1"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="24" problemId="C-Decode-913109545190031126" solutionTime="4"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="29" lastSolved="17" points="34" problemsAttempted="3" rank="30" solved="3" teamAlias="[IND] BerinGAS - University of Indonesia (not aliasesd)" teamExternalId="" teamId="19" teamKey="1TEAM19" teamName="[IND] BerinGAS - University of Indonesia" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="12" problemId="B-Hormones-4125415719594540759" solutionTime="12"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="17" problemId="C-Decode-913109545190031126" solutionTime="17"/>
+  </teamStanding>
+  <teamStanding firstSolved="9" index="30" lastSolved="15" points="35" problemsAttempted="3" rank="31" solved="3" teamAlias="[TAI] ISeaTeL - National Tsing Hua University (not aliasesd)" teamExternalId="" teamId="61" teamKey="1TEAM61" teamName="[TAI] ISeaTeL - National Tsing Hua University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="11" problemId="A-Ground Truth-2070032656405595352" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="31" lastSolved="16" points="35" problemsAttempted="3" rank="32" solved="3" teamAlias="[VIE] BKSS - Hanoi University of Science and Technology (not aliasesd)" teamExternalId="" teamId="74" teamKey="1TEAM74" teamName="[VIE] BKSS - Hanoi University of Science and Technology" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="16" problemId="A-Ground Truth-2070032656405595352" solutionTime="16"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="13" problemId="C-Decode-913109545190031126" solutionTime="13"/>
+  </teamStanding>
+  <teamStanding firstSolved="7" index="32" lastSolved="18" points="35" problemsAttempted="3" rank="33" solved="3" teamAlias="[VIE] Java# - University of Engineering and Technology - VNU (not aliasesd)" teamExternalId="" teamId="86" teamKey="1TEAM86" teamName="[VIE] Java# - University of Engineering and Technology - VNU" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="10" problemId="A-Ground Truth-2070032656405595352" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="18" problemId="B-Hormones-4125415719594540759" solutionTime="18"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="7" problemId="C-Decode-913109545190031126" solutionTime="7"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="33" lastSolved="20" points="36" problemsAttempted="3" rank="34" solved="3" teamAlias="[VIE] BKC - Hanoi University of Science and Technology (not aliasesd)" teamExternalId="" teamId="72" teamKey="1TEAM72" teamName="[VIE] BKC - Hanoi University of Science and Technology" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="13" problemId="B-Hormones-4125415719594540759" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="20" problemId="C-Decode-913109545190031126" solutionTime="20"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="34" lastSolved="18" points="37" problemsAttempted="3" rank="35" solved="3" teamAlias="[VIE] Brainf*ck - University of Engineering and Technology - VNU (not aliasesd)" teamExternalId="" teamId="82" teamKey="1TEAM82" teamName="[VIE] Brainf*ck - University of Engineering and Technology - VNU" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="18" problemId="C-Decode-913109545190031126" solutionTime="18"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="35" lastSolved="20" points="37" problemsAttempted="3" rank="36" solved="3" teamAlias="[THA] PSU_Random Code - Prince of Songkla University (not aliasesd)" teamExternalId="" teamId="105" teamKey="1TEAM105" teamName="[THA] PSU_Random Code - Prince of Songkla University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="20" problemId="B-Hormones-4125415719594540759" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="36" lastSolved="20" points="39" problemsAttempted="3" rank="37" solved="3" teamAlias="[IND] UMN-Alpha - Universitas Multimedia Nusantara (not aliasesd)" teamExternalId="" teamId="15" teamKey="1TEAM15" teamName="[IND] UMN-Alpha - Universitas Multimedia Nusantara" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="20" problemId="B-Hormones-4125415719594540759" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="37" lastSolved="21" points="40" problemsAttempted="3" rank="38" solved="3" teamAlias="[THA] CPE_V2T - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="20" teamKey="1TEAM20" teamName="[THA] CPE_V2T - Chiang Mai University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="14" problemId="B-Hormones-4125415719594540759" solutionTime="14"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="21" problemId="C-Decode-913109545190031126" solutionTime="21"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="38" lastSolved="21" points="40" problemsAttempted="3" rank="38" solved="3" teamAlias="[THA] MMS - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="48" teamKey="1TEAM48" teamName="[THA] MMS - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="21" problemId="B-Hormones-4125415719594540759" solutionTime="21"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="39" lastSolved="23" points="41" problemsAttempted="3" rank="40" solved="3" teamAlias="[THA] Nexus - Walailak University (not aliasesd)" teamExternalId="" teamId="107" teamKey="1TEAM107" teamName="[THA] Nexus - Walailak University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="23" problemId="C-Decode-913109545190031126" solutionTime="23"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="40" lastSolved="11" points="42" problemsAttempted="3" rank="41" solved="3" teamAlias="[TAI] TaiDaJiaYou - National Taiwan University (not aliasesd)" teamExternalId="" teamId="54" teamKey="1TEAM54" teamName="[TAI] TaiDaJiaYou - National Taiwan University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="8" problemId="B-Hormones-4125415719594540759" solutionTime="8"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="31" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="41" lastSolved="21" points="42" problemsAttempted="3" rank="42" solved="3" teamAlias="[THA] SourceCode - Prince of Songkla University, Phuket Campus (not aliasesd)" teamExternalId="" teamId="102" teamKey="1TEAM102" teamName="[THA] SourceCode - Prince of Songkla University, Phuket Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="18" problemId="B-Hormones-4125415719594540759" solutionTime="18"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="21" problemId="C-Decode-913109545190031126" solutionTime="21"/>
+  </teamStanding>
+  <teamStanding firstSolved="1" index="42" lastSolved="14" points="43" problemsAttempted="3" rank="43" solved="3" teamAlias="[VIE] THINK and CODE - FPT University (not aliasesd)" teamExternalId="" teamId="67" teamKey="1TEAM67" teamName="[VIE] THINK and CODE - FPT University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="1" problemId="A-Ground Truth-2070032656405595352" solutionTime="1"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="8" problemId="B-Hormones-4125415719594540759" solutionTime="8"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="34" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="7" index="43" lastSolved="19" points="43" problemsAttempted="3" rank="44" solved="3" teamAlias="[VIE] HCMUS-BKB - Ho Chi Minh City University of Science (not aliasesd)" teamExternalId="" teamId="76" teamKey="1TEAM76" teamName="[VIE] HCMUS-BKB - Ho Chi Minh City University of Science" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="7" problemId="A-Ground Truth-2070032656405595352" solutionTime="7"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="17" problemId="B-Hormones-4125415719594540759" solutionTime="17"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="19" problemId="C-Decode-913109545190031126" solutionTime="19"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="44" lastSolved="28" points="44" problemsAttempted="3" rank="45" solved="3" teamAlias="[THA] CSCU Choux Cream - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="92" teamKey="1TEAM92" teamName="[THA] CSCU Choux Cream - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="28" problemId="B-Hormones-4125415719594540759" solutionTime="28"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="12" problemId="C-Decode-913109545190031126" solutionTime="12"/>
+  </teamStanding>
+  <teamStanding firstSolved="11" index="45" lastSolved="19" points="46" problemsAttempted="3" rank="46" solved="3" teamAlias="[CHI] Pivot - Shanghai Jiao Tong University (not aliasesd)" teamExternalId="" teamId="91" teamKey="1TEAM91" teamName="[CHI] Pivot - Shanghai Jiao Tong University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="11" problemId="A-Ground Truth-2070032656405595352" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="19" problemId="B-Hormones-4125415719594540759" solutionTime="19"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="16" problemId="C-Decode-913109545190031126" solutionTime="16"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="46" lastSolved="26" points="46" problemsAttempted="3" rank="47" solved="3" teamAlias="[THA] Osiris - Kasetsart University, Sriracha Campus (not aliasesd)" teamExternalId="" teamId="93" teamKey="1TEAM93" teamName="[THA] Osiris - Kasetsart University, Sriracha Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="26" problemId="B-Hormones-4125415719594540759" solutionTime="26"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="16" problemId="C-Decode-913109545190031126" solutionTime="16"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="47" lastSolved="16" points="48" problemsAttempted="3" rank="48" solved="3" teamAlias="[THA] CBSCSCU Mhee Noi Narak - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="24" teamKey="1TEAM24" teamName="[THA] CBSCSCU Mhee Noi Narak - Chulalongkorn University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="16" problemId="B-Hormones-4125415719594540759" solutionTime="16"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="30" problemId="C-Decode-913109545190031126" solutionTime="10"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="48" lastSolved="22" points="49" problemsAttempted="3" rank="49" solved="3" teamAlias="[THA] BUU-My Friend - Burapha University (not aliasesd)" teamExternalId="" teamId="6" teamKey="1TEAM6" teamName="[THA] BUU-My Friend - Burapha University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="22" problemId="A-Ground Truth-2070032656405595352" solutionTime="22"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="6" problemId="B-Hormones-4125415719594540759" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="21" problemId="C-Decode-913109545190031126" solutionTime="21"/>
+  </teamStanding>
+  <teamStanding firstSolved="9" index="49" lastSolved="24" points="49" problemsAttempted="3" rank="50" solved="3" teamAlias="[CHI] Rain_of_chaos - Tianjin University (not aliasesd)" teamExternalId="" teamId="108" teamKey="1TEAM108" teamName="[CHI] Rain_of_chaos - Tianjin University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="9" problemId="A-Ground Truth-2070032656405595352" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="16" problemId="B-Hormones-4125415719594540759" solutionTime="16"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="24" problemId="C-Decode-913109545190031126" solutionTime="24"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="50" lastSolved="14" points="50" problemsAttempted="3" rank="51" solved="3" teamAlias="[TAI] derderderderderder - National Tsing Hua University (not aliasesd)" teamExternalId="" teamId="56" teamKey="1TEAM56" teamName="[TAI] derderderderderder - National Tsing Hua University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="26" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="14" problemId="B-Hormones-4125415719594540759" solutionTime="14"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="10" problemId="C-Decode-913109545190031126" solutionTime="10"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="51" lastSolved="15" points="50" problemsAttempted="3" rank="52" solved="3" teamAlias="[THA] CHAY-GOT-TING - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="26" teamKey="1TEAM26" teamName="[THA] CHAY-GOT-TING - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="26" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="9" problemId="C-Decode-913109545190031126" solutionTime="9"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="52" lastSolved="38" points="54" problemsAttempted="3" rank="53" solved="3" teamAlias="[THA] NooyimC1 - Khon Kaen University (not aliasesd)" teamExternalId="" teamId="89" teamKey="1TEAM89" teamName="[THA] NooyimC1 - Khon Kaen University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="14" problemId="B-Hormones-4125415719594540759" solutionTime="14"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="38" problemId="C-Decode-913109545190031126" solutionTime="38"/>
+  </teamStanding>
+  <teamStanding firstSolved="10" index="53" lastSolved="15" points="56" problemsAttempted="3" rank="54" solved="3" teamAlias="[THA] CPCUBUG - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="71" teamKey="1TEAM71" teamName="[THA] CPCUBUG - Chulalongkorn University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="30" problemId="A-Ground Truth-2070032656405595352" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="11" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="54" lastSolved="17" points="56" problemsAttempted="3" rank="55" solved="3" teamAlias="[SIN] DCM - National University of Singapore (not aliasesd)" teamExternalId="" teamId="34" teamKey="1TEAM34" teamName="[SIN] DCM - National University of Singapore" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="true" points="35" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="17" problemId="C-Decode-913109545190031126" solutionTime="17"/>
+  </teamStanding>
+  <teamStanding firstSolved="12" index="55" lastSolved="28" points="56" problemsAttempted="3" rank="56" solved="3" teamAlias="[THA] Tomato Sort - King Mongkut's Institute of Technology Ladkrabang (not aliasesd)" teamExternalId="" teamId="57" teamKey="1TEAM57" teamName="[THA] Tomato Sort - King Mongkut's Institute of Technology Ladkrabang" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="16" problemId="A-Ground Truth-2070032656405595352" solutionTime="16"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="28" problemId="B-Hormones-4125415719594540759" solutionTime="28"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="12" problemId="C-Decode-913109545190031126" solutionTime="12"/>
+  </teamStanding>
+  <teamStanding firstSolved="13" index="56" lastSolved="25" points="58" problemsAttempted="3" rank="57" solved="3" teamAlias="[SOU] GodMinSoo - Yonsei University (not aliasesd)" teamExternalId="" teamId="49" teamKey="1TEAM49" teamName="[SOU] GodMinSoo - Yonsei University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="20" problemId="A-Ground Truth-2070032656405595352" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="25" problemId="B-Hormones-4125415719594540759" solutionTime="25"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="13" problemId="C-Decode-913109545190031126" solutionTime="13"/>
+  </teamStanding>
+  <teamStanding firstSolved="9" index="57" lastSolved="27" points="58" problemsAttempted="3" rank="58" solved="3" teamAlias="[VIE] HUBT Banana Kong - Hanoi University of Business and Technology (not aliasesd)" teamExternalId="" teamId="70" teamKey="1TEAM70" teamName="[VIE] HUBT Banana Kong - Hanoi University of Business and Technology" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="22" problemId="A-Ground Truth-2070032656405595352" solutionTime="22"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="27" problemId="C-Decode-913109545190031126" solutionTime="27"/>
+  </teamStanding>
+  <teamStanding firstSolved="10" index="58" lastSolved="31" points="59" problemsAttempted="3" rank="59" solved="3" teamAlias="[SOU] Snorlax - Soongsil University (not aliasesd)" teamExternalId="" teamId="45" teamKey="1TEAM45" teamName="[SOU] Snorlax - Soongsil University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="10" problemId="A-Ground Truth-2070032656405595352" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="18" problemId="B-Hormones-4125415719594540759" solutionTime="18"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="31" problemId="C-Decode-913109545190031126" solutionTime="31"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="59" lastSolved="47" points="59" problemsAttempted="3" rank="60" solved="3" teamAlias="[THA] Cat Coding - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="22" teamKey="1TEAM22" teamName="[THA] Cat Coding - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="47" problemId="C-Decode-913109545190031126" solutionTime="47"/>
+  </teamStanding>
+  <teamStanding firstSolved="9" index="60" lastSolved="20" points="62" problemsAttempted="3" rank="61" solved="3" teamAlias="[THA] PSU_So High - Prince of Songkla University (not aliasesd)" teamExternalId="" teamId="75" teamKey="1TEAM75" teamName="[THA] PSU_So High - Prince of Songkla University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="9" problemId="A-Ground Truth-2070032656405595352" solutionTime="9"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="true" points="40" problemId="B-Hormones-4125415719594540759" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="13" problemId="C-Decode-913109545190031126" solutionTime="13"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="61" lastSolved="26" points="65" problemsAttempted="3" rank="62" solved="3" teamAlias="[THA] GubBanPaiLaew - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="30" teamKey="1TEAM30" teamName="[THA] GubBanPaiLaew - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="14" problemId="B-Hormones-4125415719594540759" solutionTime="14"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="46" problemId="C-Decode-913109545190031126" solutionTime="26"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="62" lastSolved="33" points="65" problemsAttempted="3" rank="63" solved="3" teamAlias="[THA] BUU-JPN - Burapha University (not aliasesd)" teamExternalId="" teamId="2" teamKey="1TEAM2" teamName="[THA] BUU-JPN - Burapha University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="33" problemId="B-Hormones-4125415719594540759" solutionTime="33"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="27" problemId="C-Decode-913109545190031126" solutionTime="27"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="63" lastSolved="46" points="65" problemsAttempted="3" rank="64" solved="3" teamAlias="[HON] HKUST Astronaut - Hong Kong University of Science and Technology (not aliasesd)" teamExternalId="" teamId="5" teamKey="1TEAM5" teamName="[HON] HKUST Astronaut - Hong Kong University of Science and Technology" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="6" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="46" problemId="B-Hormones-4125415719594540759" solutionTime="46"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="13" problemId="C-Decode-913109545190031126" solutionTime="13"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="64" lastSolved="14" points="66" problemsAttempted="3" rank="65" solved="3" teamAlias="[VIE] .NET - University of Engineering and Technology - VNU (not aliasesd)" teamExternalId="" teamId="80" teamKey="1TEAM80" teamName="[VIE] .NET - University of Engineering and Technology - VNU" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="25" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="7" problemId="B-Hormones-4125415719594540759" solutionTime="7"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="34" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="65" lastSolved="29" points="69" problemsAttempted="3" rank="66" solved="3" teamAlias="[THA] MUgiw mugiw - Mahidol University (not aliasesd)" teamExternalId="" teamId="68" teamKey="1TEAM68" teamName="[THA] MUgiw mugiw - Mahidol University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="true" points="49" problemId="B-Hormones-4125415719594540759" solutionTime="29"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="17" problemId="C-Decode-913109545190031126" solutionTime="17"/>
+  </teamStanding>
+  <teamStanding firstSolved="5" index="66" lastSolved="14" points="70" problemsAttempted="3" rank="67" solved="3" teamAlias="[THA] CPCU North Star - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="51" teamKey="1TEAM51" teamName="[THA] CPCU North Star - Chulalongkorn University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="5" problemId="A-Ground Truth-2070032656405595352" solutionTime="5"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="14" problemId="B-Hormones-4125415719594540759" solutionTime="14"/>
+    <problemSummaryInfo attempts="3" index="3" isPending="false" isSolved="true" points="51" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="67" lastSolved="14" points="71" problemsAttempted="3" rank="68" solved="3" teamAlias="[SIN] DHY - Nanyang Technological University (not aliasesd)" teamExternalId="" teamId="25" teamKey="1TEAM25" teamName="[SIN] DHY - Nanyang Technological University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="3" index="1" isPending="false" isSolved="true" points="46" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="11" problemId="B-Hormones-4125415719594540759" solutionTime="11"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="14" problemId="C-Decode-913109545190031126" solutionTime="14"/>
+  </teamStanding>
+  <teamStanding firstSolved="24" index="68" lastSolved="24" points="72" problemsAttempted="3" rank="69" solved="3" teamAlias="[THA] CPCU IdeaPocket - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="50" teamKey="1TEAM50" teamName="[THA] CPCU IdeaPocket - Chulalongkorn University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="24" problemId="A-Ground Truth-2070032656405595352" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="24" problemId="B-Hormones-4125415719594540759" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="24" problemId="C-Decode-913109545190031126" solutionTime="24"/>
+  </teamStanding>
+  <teamStanding firstSolved="10" index="69" lastSolved="38" points="72" problemsAttempted="3" rank="70" solved="3" teamAlias="[SIN] Orange Juice - Nanyang Technological University (not aliasesd)" teamExternalId="" teamId="29" teamKey="1TEAM29" teamName="[SIN] Orange Juice - Nanyang Technological University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="10" problemId="A-Ground Truth-2070032656405595352" solutionTime="10"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="24" problemId="B-Hormones-4125415719594540759" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="38" problemId="C-Decode-913109545190031126" solutionTime="38"/>
+  </teamStanding>
+  <teamStanding firstSolved="15" index="70" lastSolved="36" points="77" problemsAttempted="3" rank="71" solved="3" teamAlias="[THA] KMUTNB_EOS - King Mongkut's University of Technology North Bangkok (not aliasesd)" teamExternalId="" teamId="99" teamKey="1TEAM99" teamName="[THA] KMUTNB_EOS - King Mongkut's University of Technology North Bangkok" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="36" problemId="A-Ground Truth-2070032656405595352" solutionTime="36"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="15" problemId="B-Hormones-4125415719594540759" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="26" problemId="C-Decode-913109545190031126" solutionTime="26"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="71" lastSolved="22" points="85" problemsAttempted="3" rank="72" solved="3" teamAlias="[THA] bravo@sccmu - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="10" teamKey="1TEAM10" teamName="[THA] bravo@sccmu - Chiang Mai University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="62" problemId="B-Hormones-4125415719594540759" solutionTime="22"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="20" problemId="C-Decode-913109545190031126" solutionTime="20"/>
+  </teamStanding>
+  <teamStanding firstSolved="11" index="72" lastSolved="34" points="85" problemsAttempted="3" rank="73" solved="3" teamAlias="[JAP] FCCPC_Alice - Tokyo Institute of Technology (not aliasesd)" teamExternalId="" teamId="13" teamKey="1TEAM13" teamName="[JAP] FCCPC_Alice - Tokyo Institute of Technology" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="11" problemId="A-Ground Truth-2070032656405595352" solutionTime="11"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="true" points="40" problemId="B-Hormones-4125415719594540759" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="34" problemId="C-Decode-913109545190031126" solutionTime="34"/>
+  </teamStanding>
+  <teamStanding firstSolved="18" index="73" lastSolved="20" points="97" problemsAttempted="3" rank="74" solved="3" teamAlias="[THA] cpe_staff - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="18" teamKey="1TEAM18" teamName="[THA] cpe_staff - Chiang Mai University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="18" problemId="A-Ground Truth-2070032656405595352" solutionTime="18"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="60" problemId="B-Hormones-4125415719594540759" solutionTime="20"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="19" problemId="C-Decode-913109545190031126" solutionTime="19"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="74" lastSolved="26" points="97" problemsAttempted="3" rank="75" solved="3" teamAlias="[THA] One Piece - Khon Kaen University (not aliasesd)" teamExternalId="" teamId="55" teamKey="1TEAM55" teamName="[THA] One Piece - Khon Kaen University" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="9" problemId="B-Hormones-4125415719594540759" solutionTime="9"/>
+    <problemSummaryInfo attempts="4" index="3" isPending="false" isSolved="true" points="86" problemId="C-Decode-913109545190031126" solutionTime="26"/>
+  </teamStanding>
+  <teamStanding firstSolved="4" index="75" lastSolved="23" points="98" problemsAttempted="3" rank="76" solved="3" teamAlias="[THA] MUICT_BUI - Mahidol University (not aliasesd)" teamExternalId="" teamId="77" teamKey="1TEAM77" teamName="[THA] MUICT_BUI - Mahidol University" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="4" problemId="A-Ground Truth-2070032656405595352" solutionTime="4"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="63" problemId="B-Hormones-4125415719594540759" solutionTime="23"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="31" problemId="C-Decode-913109545190031126" solutionTime="11"/>
+  </teamStanding>
+  <teamStanding firstSolved="19" index="76" lastSolved="34" points="98" problemsAttempted="3" rank="77" solved="3" teamAlias="[TAI] JIT - National Tsing Hua University (not aliasesd)" teamExternalId="" teamId="63" teamKey="1TEAM63" teamName="[TAI] JIT - National Tsing Hua University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="39" problemId="A-Ground Truth-2070032656405595352" solutionTime="19"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="34" problemId="B-Hormones-4125415719594540759" solutionTime="34"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="25" problemId="C-Decode-913109545190031126" solutionTime="25"/>
+  </teamStanding>
+  <teamStanding firstSolved="31" index="77" lastSolved="61" points="127" problemsAttempted="3" rank="78" solved="3" teamAlias="[THA] MUICT_PimDeed - Mahidol University (not aliasesd)" teamExternalId="" teamId="87" teamKey="1TEAM87" teamName="[THA] MUICT_PimDeed - Mahidol University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="31" problemId="A-Ground Truth-2070032656405595352" solutionTime="31"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="35" problemId="B-Hormones-4125415719594540759" solutionTime="35"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="61" problemId="C-Decode-913109545190031126" solutionTime="61"/>
+  </teamStanding>
+  <teamStanding firstSolved="39" index="78" lastSolved="48" points="128" problemsAttempted="3" rank="79" solved="3" teamAlias="[SOU] LAST_VACATION - Soongsil University (not aliasesd)" teamExternalId="" teamId="43" teamKey="1TEAM43" teamName="[SOU] LAST_VACATION - Soongsil University" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="39" problemId="A-Ground Truth-2070032656405595352" solutionTime="39"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="48" problemId="B-Hormones-4125415719594540759" solutionTime="48"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="41" problemId="C-Decode-913109545190031126" solutionTime="41"/>
+  </teamStanding>
+  <teamStanding firstSolved="15" index="79" lastSolved="69" points="129" problemsAttempted="3" rank="80" solved="3" teamAlias="[THA] Isis - Kasetsart University, Sriracha Campus (not aliasesd)" teamExternalId="" teamId="69" teamKey="1TEAM69" teamName="[THA] Isis - Kasetsart University, Sriracha Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="15" problemId="A-Ground Truth-2070032656405595352" solutionTime="15"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="69" problemId="B-Hormones-4125415719594540759" solutionTime="69"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="45" problemId="C-Decode-913109545190031126" solutionTime="45"/>
+  </teamStanding>
+  <teamStanding firstSolved="7" index="80" lastSolved="46" points="134" problemsAttempted="3" rank="81" solved="3" teamAlias="[THA] cpe_asdfghjkl - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="16" teamKey="1TEAM16" teamName="[THA] cpe_asdfghjkl - Chiang Mai University" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="27" problemId="A-Ground Truth-2070032656405595352" solutionTime="7"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="86" problemId="B-Hormones-4125415719594540759" solutionTime="46"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="21" problemId="C-Decode-913109545190031126" solutionTime="21"/>
+  </teamStanding>
+  <teamStanding firstSolved="8" index="81" lastSolved="74" points="134" problemsAttempted="3" rank="82" solved="3" teamAlias="[THA] PSU_BOT - Prince of Songkla University, Phuket Campus (not aliasesd)" teamExternalId="" teamId="90" teamKey="1TEAM90" teamName="[THA] PSU_BOT - Prince of Songkla University, Phuket Campus" teamSiteId="1" totalAttempts="3">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="8" problemId="A-Ground Truth-2070032656405595352" solutionTime="8"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="74" problemId="B-Hormones-4125415719594540759" solutionTime="74"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="52" problemId="C-Decode-913109545190031126" solutionTime="52"/>
+  </teamStanding>
+  <teamStanding firstSolved="24" index="82" lastSolved="70" points="158" problemsAttempted="3" rank="83" solved="3" teamAlias="[SOU] Touch - Soongsil University (not aliasesd)" teamExternalId="" teamId="47" teamKey="1TEAM47" teamName="[SOU] Touch - Soongsil University" teamSiteId="1" totalAttempts="4">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="90" problemId="A-Ground Truth-2070032656405595352" solutionTime="70"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="24" problemId="B-Hormones-4125415719594540759" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="44" problemId="C-Decode-913109545190031126" solutionTime="44"/>
+  </teamStanding>
+  <teamStanding firstSolved="7" index="83" lastSolved="49" points="171" problemsAttempted="3" rank="84" solved="3" teamAlias="[SIN] Alacrity - National University of Singapore (not aliasesd)" teamExternalId="" teamId="32" teamKey="1TEAM32" teamName="[SIN] Alacrity - National University of Singapore" teamSiteId="1" totalAttempts="8">
+    <problemSummaryInfo attempts="4" index="1" isPending="false" isSolved="true" points="67" problemId="A-Ground Truth-2070032656405595352" solutionTime="7"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="89" problemId="B-Hormones-4125415719594540759" solutionTime="49"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="15" problemId="C-Decode-913109545190031126" solutionTime="15"/>
+  </teamStanding>
+  <teamStanding firstSolved="3" index="84" lastSolved="41" points="174" problemsAttempted="3" rank="85" solved="3" teamAlias="[THA] sumile@CSCMU - Chiang Mai University (not aliasesd)" teamExternalId="" teamId="14" teamKey="1TEAM14" teamName="[THA] sumile@CSCMU - Chiang Mai University" teamSiteId="1" totalAttempts="9">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="3" problemId="A-Ground Truth-2070032656405595352" solutionTime="3"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="10" problemId="B-Hormones-4125415719594540759" solutionTime="10"/>
+    <problemSummaryInfo attempts="7" index="3" isPending="false" isSolved="true" points="161" problemId="C-Decode-913109545190031126" solutionTime="41"/>
+  </teamStanding>
+  <teamStanding firstSolved="2" index="85" lastSolved="59" points="177" problemsAttempted="3" rank="86" solved="3" teamAlias="[THA] NekoZero - Prince of Songkla University, Phuket Campus (not aliasesd)" teamExternalId="" teamId="79" teamKey="1TEAM79" teamName="[THA] NekoZero - Prince of Songkla University, Phuket Campus" teamSiteId="1" totalAttempts="8">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="2" problemId="A-Ground Truth-2070032656405595352" solutionTime="2"/>
+    <problemSummaryInfo attempts="5" index="2" isPending="false" isSolved="true" points="139" problemId="B-Hormones-4125415719594540759" solutionTime="59"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="36" problemId="C-Decode-913109545190031126" solutionTime="16"/>
+  </teamStanding>
+  <teamStanding firstSolved="28" index="86" lastSolved="55" points="193" problemsAttempted="3" rank="87" solved="3" teamAlias="[VIE] Roosters - Eastern International University (not aliasesd)" teamExternalId="" teamId="65" teamKey="1TEAM65" teamName="[VIE] Roosters - Eastern International University" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="28" problemId="A-Ground Truth-2070032656405595352" solutionTime="28"/>
+    <problemSummaryInfo attempts="4" index="2" isPending="false" isSolved="true" points="115" problemId="B-Hormones-4125415719594540759" solutionTime="55"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="50" problemId="C-Decode-913109545190031126" solutionTime="50"/>
+  </teamStanding>
+  <teamStanding firstSolved="32" index="87" lastSolved="83" points="196" problemsAttempted="3" rank="88" solved="3" teamAlias="[THA] BUU-Hawk Eye - Burapha University (not aliasesd)" teamExternalId="" teamId="4" teamKey="1TEAM4" teamName="[THA] BUU-Hawk Eye - Burapha University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="32" problemId="A-Ground Truth-2070032656405595352" solutionTime="32"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="81" problemId="B-Hormones-4125415719594540759" solutionTime="41"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="83" problemId="C-Decode-913109545190031126" solutionTime="83"/>
+  </teamStanding>
+  <teamStanding firstSolved="38" index="88" lastSolved="68" points="220" problemsAttempted="3" rank="89" solved="3" teamAlias="[SOU] 3 some - Soongsil University (not aliasesd)" teamExternalId="" teamId="38" teamKey="1TEAM38" teamName="[SOU] 3 some - Soongsil University" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="3" index="1" isPending="false" isSolved="true" points="94" problemId="A-Ground Truth-2070032656405595352" solutionTime="54"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="true" points="88" problemId="B-Hormones-4125415719594540759" solutionTime="68"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="38" problemId="C-Decode-913109545190031126" solutionTime="38"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="89" lastSolved="95" points="228" problemsAttempted="3" rank="90" solved="3" teamAlias="[CHI] TJU_Didiao - Tianjin University (not aliasesd)" teamExternalId="" teamId="9" teamKey="1TEAM9" teamName="[CHI] TJU_Didiao - Tianjin University" teamSiteId="1" totalAttempts="7">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="6" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="3" index="2" isPending="false" isSolved="true" points="135" problemId="B-Hormones-4125415719594540759" solutionTime="95"/>
+    <problemSummaryInfo attempts="3" index="3" isPending="false" isSolved="true" points="87" problemId="C-Decode-913109545190031126" solutionTime="47"/>
+  </teamStanding>
+  <teamStanding firstSolved="24" index="90" lastSolved="34" points="306" problemsAttempted="3" rank="91" solved="3" teamAlias="[IND] Carizad - University of Indonesia (not aliasesd)" teamExternalId="" teamId="23" teamKey="1TEAM23" teamName="[IND] Carizad - University of Indonesia" teamSiteId="1" totalAttempts="14">
+    <problemSummaryInfo attempts="12" index="1" isPending="false" isSolved="true" points="244" problemId="A-Ground Truth-2070032656405595352" solutionTime="24"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="34" problemId="B-Hormones-4125415719594540759" solutionTime="34"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="28" problemId="C-Decode-913109545190031126" solutionTime="28"/>
+  </teamStanding>
+  <teamStanding firstSolved="13" index="91" lastSolved="39" points="455" problemsAttempted="3" rank="92" solved="3" teamAlias="[THA] CPCU Prosperite - Chulalongkorn University (not aliasesd)" teamExternalId="" teamId="66" teamKey="1TEAM66" teamName="[THA] CPCU Prosperite - Chulalongkorn University" teamSiteId="1" totalAttempts="22">
+    <problemSummaryInfo attempts="20" index="1" isPending="false" isSolved="true" points="393" problemId="A-Ground Truth-2070032656405595352" solutionTime="13"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="23" problemId="B-Hormones-4125415719594540759" solutionTime="23"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="39" problemId="C-Decode-913109545190031126" solutionTime="39"/>
+  </teamStanding>
+  <teamStanding firstSolved="11" index="92" lastSolved="50" points="81" problemsAttempted="3" rank="93" solved="2" teamAlias="[THA] MUICT_TED - Mahidol University (not aliasesd)" teamExternalId="" teamId="58" teamKey="1TEAM58" teamName="[THA] MUICT_TED - Mahidol University" teamSiteId="1" totalAttempts="8">
+    <problemSummaryInfo attempts="2" index="1" isPending="false" isSolved="true" points="31" problemId="A-Ground Truth-2070032656405595352" solutionTime="11"/>
+    <problemSummaryInfo attempts="5" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="-1"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="50" problemId="C-Decode-913109545190031126" solutionTime="50"/>
+  </teamStanding>
+  <teamStanding firstSolved="30" index="93" lastSolved="55" points="85" problemsAttempted="2" rank="94" solved="2" teamAlias="[THA] Seth - Kasetsart University, Sriracha Campus (not aliasesd)" teamExternalId="" teamId="53" teamKey="1TEAM53" teamName="[THA] Seth - Kasetsart University, Sriracha Campus" teamSiteId="1" totalAttempts="2">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="2" isPending="false" isSolved="true" points="55" problemId="B-Hormones-4125415719594540759" solutionTime="55"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="30" problemId="C-Decode-913109545190031126" solutionTime="30"/>
+  </teamStanding>
+  <teamStanding firstSolved="22" index="94" lastSolved="74" points="96" problemsAttempted="3" rank="95" solved="2" teamAlias="[THA] Finally Return - Rajamangala University of Technology Isan (not aliasesd)" teamExternalId="" teamId="104" teamKey="1TEAM104" teamName="[THA] Finally Return - Rajamangala University of Technology Isan" teamSiteId="1" totalAttempts="6">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="74" problemId="A-Ground Truth-2070032656405595352" solutionTime="74"/>
+    <problemSummaryInfo attempts="4" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="-1"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="true" points="22" problemId="C-Decode-913109545190031126" solutionTime="22"/>
+  </teamStanding>
+  <teamStanding firstSolved="6" index="95" lastSolved="90" points="116" problemsAttempted="3" rank="96" solved="2" teamAlias="[THA] HnonNoi - Walailak University (not aliasesd)" teamExternalId="" teamId="84" teamKey="1TEAM84" teamName="[THA] HnonNoi - Walailak University" teamSiteId="1" totalAttempts="5">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="true" points="6" problemId="A-Ground Truth-2070032656405595352" solutionTime="6"/>
+    <problemSummaryInfo attempts="2" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="-1"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="true" points="110" problemId="C-Decode-913109545190031126" solutionTime="90"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="96" lastSolved="0" points="0" problemsAttempted="0" rank="97" solved="0" teamAlias="[THA] Autobot - King Mongkut's Institute of Technology Ladkrabang (not aliasesd)" teamExternalId="" teamId="35" teamKey="1TEAM35" teamName="[THA] Autobot - King Mongkut's Institute of Technology Ladkrabang" teamSiteId="1" totalAttempts="0">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="97" lastSolved="0" points="0" problemsAttempted="0" rank="97" solved="0" teamAlias="[THA] Hello Kitty - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="40" teamKey="1TEAM40" teamName="[THA] Hello Kitty - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="0">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="98" lastSolved="0" points="0" problemsAttempted="0" rank="97" solved="0" teamAlias="[THA] KeroJump - Kasetsart University - Thailand (not aliasesd)" teamExternalId="" teamId="41" teamKey="1TEAM41" teamName="[THA] KeroJump - Kasetsart University - Thailand" teamSiteId="1" totalAttempts="0">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="99" lastSolved="0" points="0" problemsAttempted="0" rank="97" solved="0" teamAlias="[THA] kolae - Princess of Naradhiwas University (not aliasesd)" teamExternalId="" teamId="85" teamKey="1TEAM85" teamName="[THA] kolae - Princess of Naradhiwas University" teamSiteId="1" totalAttempts="0">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="100" lastSolved="0" points="0" problemsAttempted="0" rank="97" solved="0" teamAlias="[THA] MTB_Submit - King Mongkut's Institute of Technology Ladkrabang (not aliasesd)" teamExternalId="" teamId="96" teamKey="1TEAM96" teamName="[THA] MTB_Submit - King Mongkut's Institute of Technology Ladkrabang" teamSiteId="1" totalAttempts="0">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="101" lastSolved="0" points="0" problemsAttempted="1" rank="97" solved="0" teamAlias="[THA] PSU-PN1 - Prince of Songkla University, Pattani Campus (not aliasesd)" teamExternalId="" teamId="62" teamKey="1TEAM62" teamName="[THA] PSU-PN1 - Prince of Songkla University, Pattani Campus" teamSiteId="1" totalAttempts="1">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="-1"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="102" lastSolved="0" points="0" problemsAttempted="1" rank="97" solved="0" teamAlias="[THA] PSU-PN2 - Prince of Songkla University, Pattani Campus (not aliasesd)" teamExternalId="" teamId="64" teamKey="1TEAM64" teamName="[THA] PSU-PN2 - Prince of Songkla University, Pattani Campus" teamSiteId="1" totalAttempts="1">
+    <problemSummaryInfo attempts="1" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="-1"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="0"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="103" lastSolved="0" points="0" problemsAttempted="1" rank="97" solved="0" teamAlias="[THA] Team Payap - Payap University (not aliasesd)" teamExternalId="" teamId="101" teamKey="1TEAM101" teamName="[THA] Team Payap - Payap University" teamSiteId="1" totalAttempts="2">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="2" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="-1"/>
+  </teamStanding>
+  <teamStanding firstSolved="-1" index="104" lastSolved="0" points="0" problemsAttempted="1" rank="97" solved="0" teamAlias="[THA] TPM - Suranaree University of Technology (not aliasesd)" teamExternalId="" teamId="106" teamKey="1TEAM106" teamName="[THA] TPM - Suranaree University of Technology" teamSiteId="1" totalAttempts="1">
+    <problemSummaryInfo attempts="0" index="1" isPending="false" isSolved="false" points="0" problemId="A-Ground Truth-2070032656405595352" solutionTime="0"/>
+    <problemSummaryInfo attempts="0" index="2" isPending="false" isSolved="false" points="0" problemId="B-Hormones-4125415719594540759" solutionTime="0"/>
+    <problemSummaryInfo attempts="1" index="3" isPending="false" isSolved="false" points="0" problemId="C-Decode-913109545190031126" solutionTime="-1"/>
+  </teamStanding>
+</contestStandings>
